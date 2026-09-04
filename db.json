@@ -1,5 +1,19 @@
 {
- "users": [],
+  "users": [
+    {
+      "name": "muahmmed shamil",
+      "email": "www.muhammedshamil85@gmail.com",
+      "password": "shamil123",
+      "id": "QRJ4MvfHIAA"
+    },
+    {
+      "name": "hello",
+      "email": "www.muhammedshamil845@gmail.com",
+      "password": "12345",
+      "id": "wqvIGbTpH-4"
+    }
+  ],
   "products": [],
-  "orders": []
+  "orders": [],
+  "$schema": "./node_modules/json-server/schema.json"
 }
