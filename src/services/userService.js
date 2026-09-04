@@ -1,27 +1,37 @@
 import axios from 'axios'
 
-const API_URL = "http://localhost:3001/users";
+const api = axios.create({
+    baseURL : "http://localhost:3001"
+})
 
-////REGISTER USER////
+  
 
-export const  registerUser = async (userData) => {
-    const  response = await axios.post(API_URL , userData);
-    return response.data;
+export const registerUser = async (userData) => {
+    const  existingUser = await api.get(
+        `/users?email=${userData.email}`
+    );
+
+    if(existingUser.data.length > 0){
+        throw new Error("Email already registered!")
+    }
+
+    const  response = await api.post("/users", {
+        name : userData.name,
+        email : userData.email,
+        password : userData.password,
+    });
+    return response.data
 }
 
 
-//GET ALL USERS/////
+export const loginUser = async (userData) => {
+    const response = await api.get(
+        `/users?email=${userData.email}&password=${userData.password}`
+    );
 
+    if(response.data.length === 0){
+        throw new Error("Invalid email or password!");
+    }
 
-export const getUsers = async () => {
-    const response = await axios.get(API_URL);
-    return response.data;
-};
-
-
-//FIND USER BY EMAIL//////
-
-export const getUserByEmail = async (email) => {
-    const response = await axios.get(`${API_URL}?email=${email}`)
-    return response.data
+    return response.data[0]
 }
