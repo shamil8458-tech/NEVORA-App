@@ -40,7 +40,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="w-full bg-transparent px-5 py-5 md:px-10">
+    <nav className="absolute left-0 top-0 z-50 w-full bg-transparent px-5 py-5 md:px-10">
 
       {/* Main Navbar Container */}
       <div className="mx-auto flex max-w-7xl items-center justify-between">
@@ -51,7 +51,8 @@ function Navbar() {
           onClick={closeMenu}
           className="text-2xl font-semibold tracking-[0.25em] text-gray-900"
         >
-          NEVORA
+          {/* NEVORA */}
+          NeVoRa
         </Link>
 
         {/* Desktop Navigation */}

@@ -3,6 +3,7 @@ import Login from "../Pages/Login"
 import Register from "../Pages/Register"
 import ProductDetails from "../Pages/ProductDetails"
 import Products from "../Pages/Products"
+import Home from "../Pages/Home"
 
 function AppRoutes() {
   return (
@@ -10,7 +11,7 @@ function AppRoutes() {
 
         <Routes>
      
-             <Route path="/" element={<h1>Home Page</h1>}/>
+             <Route path="/" element={<Home/>}/>
               <Route path="/login" element={<Login/>}/>
              <Route path="/register" element={<Register/>}/>
              <Route path="/products" element={<Products/>}/>
