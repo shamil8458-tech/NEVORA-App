@@ -1,15 +1,15 @@
 import React from 'react'
 import AppRoutes from './routes/AppRoutes'
-// import ProductCard from './components/ProductCard'
-import Products from './Pages/Products'
+import Navbar from './components/Navbar'
+import { Home } from 'lucide-react'
 
 function App() {
   return (
     <div>
-
+      
+      <Navbar/>
+      <Home/>
       <AppRoutes/>
-      {/* <ProductCard/> */}
-      <Products/>
       
     </div>
   )
