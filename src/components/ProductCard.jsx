@@ -1,5 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
+import { Heart } from "lucide-react";
+
 
 
 function ProductCard({product}) {
@@ -8,17 +10,47 @@ function ProductCard({product}) {
   const navigate = useNavigate();
 
   return (
-    <div onClick={() => navigate(`/products/${product.id}`)}>
+    <div onClick={() => navigate(`/products/${product.id}`)}
+    className="cursor-pointer bg-white">
 
       
+     {/* ///Product-img/// */}
+
+     <div className="relative overflow-hidden bg-[#f5f4ef]">
+
+  
+
+      <img src={product.image} alt={product.name} 
+      className="h-64 w-full object-cover transition duration-300 hover:scale-105"/>
+
+      <button onClick={(e) => e.stopPropagation()}
+        className="absolute right-3 top-3 text-gray-700 transition hover:text-gray-500"
+        aria-label="Add to wishlist">
+          <Heart size={21} strokeWidth={1.5}/>
+        </button>
+
+       </div>
 
 
-      <img src={product.image} alt={product.name} />
+    
+      {/* Product Information */}
 
-      <h5>{product.name}</h5>
-      <h4>₹{product.price}</h4>
+      <div className="px-3 py-4 text-center">
 
-      <button>Add to Cart</button>
+        <h3 className="text-sm font-medium text-gray-900">{product.name}</h3>
+
+
+      
+      <p className="mt-2 text-sm font-semibold text-gray-900">
+        ₹{product.price}
+        </p>
+
+      <button onClick={(e) => e.stopPropagation()}
+      className="mt-4 bg-gray-900 px-6 py-2 text-xs font-medium text-white transition hover:bg-gray-500"
+      >Add to Cart
+      </button>
+
+           </div>
       
     </div>
   )

@@ -1,5 +1,8 @@
 
 import { useEffect, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
+import ProductCard from "../components/ProductCard";
+import { getProducts } from "../services/productService";
 
 
 import hero1 from "../assets/hero1.png";
@@ -28,6 +31,12 @@ function Home() {
   const [currentImage, setCurrentImage] = useState(0);
 
   const heroImage = [hero1, hero2, hero3, hero4];
+
+
+  const {data : products , isLoading , isError} = useQuery({
+    queryKey : ["products"],
+    queryFn : getProducts,
+  })
 
   useEffect(() => {
 
@@ -169,7 +178,7 @@ function Home() {
 
       {/* Shop By Category */}
 
-      <section className="bg-[#faf9f6] px-6 py-16 md:px-10">
+      <section id="categories" className="bg-[#faf9f6] px-6 py-16 md:px-10">
 
         <div className="mx-auto max-w-7xl ">
           
@@ -263,6 +272,50 @@ function Home() {
                 </button>
 
             </div>
+
+        </div>
+
+      </section>
+
+
+
+
+      {/* ////offer Banner/// */}
+
+
+      <section className="px-6 py-16 md:px-10">
+
+        <div className="mx-auto max-w-7xl">
+
+          <div className="mb-10 flex items-center justify-between">
+                 <h2 className="text-2xl font-semibold text-gray-900 md:text-3xl">
+                  New Arrivals
+                 </h2>
+
+                 <button onClick={() => navigate("/products")}
+                  className="text-sm font-medium text-gray-700 underline">
+                     View All
+                 </button>
+          </div>
+
+          {isLoading && (
+            <p>Loading products...</p>
+          )}
+
+          {isError && (
+            <p>Failed to load products</p>
+          )}
+
+          {products && (
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+
+              {products.slice(4,8).map((item) => (
+                <ProductCard key={item.id}
+                product={item}/>
+              ))}
+
+            </div>
+          )}
 
         </div>
 

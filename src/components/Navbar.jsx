@@ -73,7 +73,7 @@ function Navbar() {
           </Link>
 
           <Link
-            to="/categories"
+            to="/#categories"
             className="text-sm font-medium text-gray-800 transition hover:text-gray-500"
           >
             Categories
