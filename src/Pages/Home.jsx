@@ -1,84 +1,29 @@
-// import { useEffect, useState } from 'react'
-// import hero1 from '../assets/hero1.png'
-// import hero2 from '../assets/hero2.png'
-// import hero3 from '../assets/hero3.png'
-// import hero4 from '../assets/hero4.png'
-
-// function Home() {
-
-//     const [currentImage , setCurrentImage] = useState(0);
-
-//     const heroImage= [hero1 , hero2 , hero3 , hero4] ;
-
-//     useEffect(() => {
-//         const interval = setInterval(() => {
-//             setCurrentImage((prev) => (prev + 1) % heroImage.length);
-
-//         },3000);
-//         return () => clearInterval(interval)
-//     },[]);
-
-
-//   return (
-//      <section className="relative min-h-screen w-full overflow-hidden">
-
-//              {/* Hero Image */}
-
-//              <img src={heroImage[currentImage]} alt="NEVORA skincare products"
-//              className='absolute inset-0 h-full w-full object-cover transition-opacity duration-700' />
-
-
-//              {/* Hero Content */}
-
-
-//              <div className='relative z-10 mx-auto flex min-h-[600px] max-w-7xl items-center px-6 md:px-10'>
-
-//             <div className='max-w-lg'>
-
-//                 <p className='mb-4 text-sm font-medium uppercase tracking-[0.25em] text-gray-700 '>
-//                      Naturally Pure
-//                 </p>
-
-//                 <h1 className='text-4xl font-semibold leading-tight text-gray-900 md:text-6xl'>
-//                     Beautiful Skin.
-//                     <br />
-//                       Naturally.
-//                 </h1>
-
-//                 <p className='mt-5 max-w-md text-sm leading-6 text-gray-700 md:text-base'>
-//                       Discover gentle and effective skincare made for
-//                       healthy, fresh and naturally glowing skin.
-//                 </p>
-
-//                 <button className='mt-7 bg-gray-900 px-7 py-3 text-sm font-medium text-white transition hover:bg-gray-700'>
-//                     Shop Now
-//                 </button>
-
-//                          </div>
-//              </div>
-             
-
-//      </section>
-//   )
-// }
-
-// export default Home
-
-
-
-
 
 import { useEffect, useState } from "react";
+
 
 import hero1 from "../assets/hero1.png";
 import hero2 from "../assets/hero2.png";
 import hero3 from "../assets/hero3.png";
 import hero4 from "../assets/hero4.png";
 
+
+import bestSeller from "../assets/categories/best-seller.png";
+import cleanser from "../assets/categories/cleanser.png";
+import serum from "../assets/categories/serum.png";
+import moisturiser from "../assets/categories/moisturiser.png";
+import sunscreen from "../assets/categories/sunscreen.png";
+import skincareKit from "../assets/categories/skincare-kit.png";
+
+import banner from '../assets/Banner/banner.png'
+
 import { Leaf, Droplets, Heart, Recycle } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 
 function Home() {
+
+    const navigate = useNavigate();
 
   const [currentImage, setCurrentImage] = useState(0);
 
@@ -90,7 +35,7 @@ function Home() {
       setCurrentImage(
         (prev) => (prev + 1) % heroImage.length
       );
-    }, 17000);
+    }, 15000);
 
     return () => clearInterval(interval);
 
@@ -216,6 +161,108 @@ function Home() {
             </div>
 
           </div>
+
+        </div>
+
+      </section>
+
+
+      {/* Shop By Category */}
+
+      <section className="bg-[#faf9f6] px-6 py-16 md:px-10">
+
+        <div className="mx-auto max-w-7xl ">
+          
+          <h2 className="mb-10 text-center text-2xl font-semibold text-gray-900 md:text-3xl">Shop By Category</h2>
+
+          <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-6 ">
+               
+               <div onClick={() => navigate(`/products?category=Cleansers`)}
+                className="cursor-pointer text-center ">
+                <img src={cleanser} alt="Cleansers" 
+                className="h-40 w-full object-cover transition duration-300 hover:scale-105 md:h-48"
+                />
+                <h3 className="mt-4 text-sm font-medium text-gray-900"
+                >CLEANSERS</h3>
+               </div>
+
+
+               <div onClick={() => navigate(`/products?category=Serums`)}
+                className="cursor-pointer text-center">
+                 <img src={serum} alt="serum" 
+                 className="h-40 w-full object-cover transition duration-300 hover:scale-105 md:h-48"
+                 />
+                 <h3 className="mt-4 text-sm font-medium text-gray-900">SERUMS</h3>
+               </div>
+
+
+               <div onClick={() => navigate(`/products?category=Moisturisers`)}
+                className="cursor-pointer text-center">
+                <img src={moisturiser} alt="moisturiser" 
+                className="h-40 w-full object-cover transition duration-300 hover:scale-105 md:h-48"
+                />
+                <h3 className="mt-4 text-sm font-medium text-gray-900">MOISTURIZERS</h3>
+               </div>
+
+               <div onClick={() => navigate(`products?category=Sunscreens`)}
+                className="cursor-pointer text-center">
+                <img src={sunscreen} alt="sunscreen"
+                className="h-40 w-full object-cover transition duration-300 hover:scale-105 md:h-48"
+                />
+                <h3 className="mt-4 text-sm font-medium text-gray-900">SUN CARE</h3>
+               </div>
+
+
+               <div onClick={() => navigate(`products?category=Skin Care Kits`)}
+                className="cursor-pointer text-center">
+                <img src={skincareKit} alt="skincareKit"
+                className="h-40 w-full object-cover transition duration-300 hover:scale-105 md:h-48"
+                />
+                <h3 className="mt-4 text-sm font-medium text-gray-900">SKIN CARE KITS</h3>
+               </div>
+
+
+               <div onClick={() => navigate(`products?category=Best Sellers`)}
+                className="cursor-pointer text-center">
+                <img src={bestSeller} alt="bestSeller" 
+                className="h-40 w-full object-cover transition duration-300 hover:scale-105 md:h-48"
+                />
+                <h3 className="mt-4 text-sm font-medium text-gray-900">BEST SELLER</h3>
+               </div>
+          </div>
+          </div>
+      </section>
+
+
+      {/* Offer Banner */}
+
+
+      <section className="relative h-[350px] w-full overflow-hidden">
+
+        <img src={banner} alt="NEVORA special offer"
+        className="absolute inset-0 h-full w-full object-cover" />
+
+        <div className="relative z-10 flex h-full items-center px-6 md:px-16">
+
+            <div className="max-w-md">
+
+                <p className="text-sm font-medium uppercase tracking-wider text-gray-700">
+                 Special Offer
+                </p>
+
+                <h2 className="mt-2 text-3xl font-semibold text-gray-900 md:text-4xl">
+                    Up to 25% Off
+                </h2>
+
+                <p className="mt-2 text-sm text-gray-700">
+                    Discover our skincare essentials at special prices.
+                </p>
+
+                <button className="mt-5 bg-gray-900 px-6 py-3 text-sm font-medium text-white">
+                 Explore Offers
+                </button>
+
+            </div>
 
         </div>
 

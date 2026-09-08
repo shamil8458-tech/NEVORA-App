@@ -21,7 +21,7 @@
      "price" : 499,
      "originalPrice" : 599,
      "description" : "Gentle face wash with green tea and aloe vera.",
-     "image" : "",
+     "image" : "/Products/Cleansers1.png",
      "rating" : 4.5,
      "stock" : 20
     },
@@ -33,7 +33,7 @@
      "price" : 449,
      "originalPrice" : 549,
      "description" : "Lightweight SPF 50 sunscreen that protects skin from harmful UV rays without leaving a white cast.",
-     "image" : "",
+     "image" : "/Products/Sunscreens1.png",
      "rating" : 4.6,
      "stock" : 28
     },
@@ -45,7 +45,7 @@
      "price" : 499,
      "originalPrice" : 599,
      "description" : "Non-sticky sunscreen gel with a smooth finish that keeps your skin protected and fresh throughout the day",
-     "image" : "",
+     "image" : "/Products/Sunscreens2.png",
      "rating" : 4.8,
      "stock" : 30
     },
@@ -57,7 +57,7 @@
      "price" : 279,
      "originalPrice" : 329,
      "description" : "Soft foaming cleanser that gently cleans the skin without making it feel dry or tight.",
-     "image" : "",
+     "image" : "/Products/Cleansers2.png",
      "rating" : 4.4,
      "stock" : 21
     },
@@ -69,7 +69,7 @@
      "price" : 699,
      "originalPrice" : 799,
      "description" : "Vitamin C serum that helps improve dull-looking skin and gives a brighter and more even appearance.",
-     "image" : "",
+     "image" : "/Products/serum1.png",
      "rating" : 4.9,
      "stock" : 17
     },
@@ -81,7 +81,7 @@
      "price" : 499,
      "originalPrice" : 599,
      "description" : "Niacinamide serum that helps control excess oil and supports a clearer and healthier-looking complexion.",
-     "image" : "",
+     "image" : "/Products/Serum2.png",
      "rating" : 4.6,
      "stock" : 13
     },
@@ -93,7 +93,7 @@
      "price" : 349,
      "originalPrice" : 429,
      "description" : "Lightweight aloe vera moisturiser that provides everyday hydration and leaves skin soft and comfortable.",
-     "image" : "",
+     "image" : "/Products/Moisturisers1.png",
      "rating" : 4.5,
      "stock" : 30
     },
@@ -105,7 +105,7 @@
      "price" : 499,
      "originalPrice" : 549,
      "description" : "Rich ceramide moisturiser that helps support the skin barrier and provides long-lasting hydration.",
-     "image" : "",
+     "image" : "/Products/Moisturisers2.png",
      "rating" : 4.8,
      "stock" : 21
     },
@@ -117,7 +117,7 @@
      "price" : 999,
      "originalPrice" : 1249,
      "description" : "Complete skincare kit with cleanser, serum and moisturiser for a simple daily skincare routine.",
-     "image" : "",
+     "image" : "/Products/skincarekit3.png",
      "rating" : 4.8,
      "stock" : 12
     },
@@ -129,7 +129,7 @@
      "price" : 799,
      "originalPrice" : 949,
      "description" : "A customer-favourite combination featuring brightening skincare essentials for a fresh and glowing look.",
-     "image" : "",
+     "image" : "/Products/bestseller1.png",
      "rating" : 4.9,
      "stock" : 18
     },
@@ -141,7 +141,7 @@
      "price" : 399,
      "originalPrice" : 479,
      "description" : "Oil-free water gel moisturiser that feels light on the skin and provides refreshing hydration.",
-     "image" : "",
+     "image" : "/Products/Moisturisers3.png",
      "rating" : 4.6,
      "stock" : 21
     },
@@ -153,7 +153,7 @@
      "price" : 999,
      "originalPrice" : 1199,
      "description" : "Hydration-focused skincare kit designed to keep your skin moisturised, soft and fresh throughout the day.",
-     "image" : "",
+     "image" : "/Products/skincarekit1.png",
      "rating" : 4.7,
      "stock" : 10
     },
@@ -165,7 +165,7 @@
      "price" : 899,
      "originalPrice" : 1099,
      "description" : "Best-selling skincare combo created to give your daily routine a simple, fresh and glowing finish.",
-     "image" : "",
+     "image" : "/Products/skincarekit2.png",
      "rating" : 4.8,
      "stock" : 20
     },
@@ -173,11 +173,11 @@
     {"id" : 14,
      "name" : "Rose Water Hydrating Mist",
      "brand" : "Nevora",
-     "category" : "Skin Care",
+     "category" : "Skin Care kits",
      "price" : 299,
      "originalPrice" : 399,
      "description" : "Refreshing rose water face mist that instantly hydrates the skin and gives a fresh, natural glow.",
-     "image" : "",
+     "image" : "/Products/skincare.png",
      "rating" : 4.2,
      "stock" : 24
     },
@@ -189,7 +189,7 @@
      "price" : 1099,
      "originalPrice" : 1299,
      "description" : "Popular daily skincare set containing essential products for cleansing, hydration and skin protection.",
-     "image" : "",
+     "image" : "/Products/bestseller2.png",
      "rating" : 4.9,
      "stock" : 16
     }
