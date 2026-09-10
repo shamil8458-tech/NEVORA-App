@@ -5,6 +5,7 @@ import ProductDetails from "../Pages/ProductDetails"
 import Products from "../Pages/Products"
 import Home from "../Pages/Home"
 
+
 function AppRoutes() {
   return (
     <div>
