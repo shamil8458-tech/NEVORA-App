@@ -22,27 +22,78 @@ function ProductDetails() {
 
 
   return (
-    <div>
+     <div className="min-h-screen bg-[#faf9f6] px-6 py-28 md:px-10">
 
-        <img src={product.image} alt={product.name} />
+    <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 md:grid-cols-2 md:gap-16">
 
-         <h2>{product.name}</h2>
+      {/* Product Image */}
 
-         <p>Brand: {product.brand}</p>
+      <div className="bg-[#f5f4ef]">
+        <img
+          src={product.image}
+          alt={product.name}
+          className="h-[500px] w-full object-cover md:h-[600px]"
+        />
+      </div>
 
-         <p>Category: {product.category}</p>
 
-         <h3>₹{product.price}</h3>
+      {/* Product Information */}
 
-         <p>{product.description}</p>
+      <div className="flex flex-col justify-center">
 
-         <p>Rating: {product.rating}</p>
+        <p className="text-xs font-medium uppercase tracking-wider text-gray-500">
+          {product.brand}
+        </p>
 
-         <p>Stock: {product.stock}</p>
+        <h1 className="mt-3 text-3xl font-semibold text-gray-900 md:text-4xl">
+          {product.name}
+        </h1>
 
-           <button>Add to Cart</button>
-      
+        <p className="mt-3 text-sm text-gray-500">
+          {product.category}
+        </p>
+
+        <h2 className="mt-6 text-2xl font-semibold text-gray-900">
+          ₹{product.price}
+        </h2>
+
+        <p className="mt-6 max-w-lg text-sm leading-6 text-gray-600">
+          {product.description}
+        </p>
+
+
+        {/* Rating & Stock */}
+
+        <div className="mt-6 flex gap-6 text-sm text-gray-600">
+
+          <p>
+            Rating: <span className="font-medium text-gray-900">
+              {product.rating}
+            </span>
+          </p>
+
+          <p>
+            Stock: <span className="font-medium text-gray-900">
+              {product.stock}
+            </span>
+          </p>
+
+        </div>
+
+
+        {/* Add To Cart */}
+
+        <button
+          className="mt-8 w-full bg-gray-900 px-6 py-4 text-sm font-medium text-white transition hover:bg-gray-700 md:w-fit"
+        >
+          ADD TO CART
+        </button>
+
+      </div>
+
     </div>
+
+  </div>
   );
 }
 
