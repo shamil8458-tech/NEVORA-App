@@ -34,7 +34,7 @@ const cartSlice = createSlice({
         },
        
 
-        // decrese quantity///
+        // Decrease quantity
 
 
         decreaseQuantity : (state , action) => {
