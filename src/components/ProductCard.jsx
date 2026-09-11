@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
-
+import {useDispatch} from 'react-redux'
 import { Heart } from "lucide-react";
+import { addToCart } from "../Redux/Slice/CartSlice";
 
 
 
@@ -8,6 +9,7 @@ function ProductCard({product}) {
 
 
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   return (
     <div onClick={() => navigate(`/products/${product.id}`)}
@@ -45,7 +47,10 @@ function ProductCard({product}) {
         ₹{product.price}
         </p>
 
-      <button onClick={(e) => e.stopPropagation()}
+      <button onClick={(e) => {
+        e.stopPropagation();
+        dispatch(addToCart(product))
+      }}
       className="mt-4 bg-gray-900 px-6 py-2 text-xs font-medium text-white transition hover:bg-gray-500"
       >Add to Cart
       </button>
