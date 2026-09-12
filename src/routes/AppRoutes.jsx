@@ -6,6 +6,10 @@ import Products from "../Pages/Products"
 import Home from "../Pages/Home"
 import Cart from "../Pages/Cart"
 import Wishlist from "../Pages/Wishlist"
+import Checkout from "../Pages/Checkout"
+import Orders from "../Pages/Orders"
+
+
 
 function AppRoutes() {
   return (
@@ -20,7 +24,10 @@ function AppRoutes() {
              <Route path="/products/:id" element={<ProductDetails/>}/>
              <Route path="/cart" element={<Cart />} />
              <Route path="/wishlist" element={<Wishlist />} />
-             
+             <Route path="/checkout" element={<Checkout />} />
+            <Route path="/orders" element={<Orders />} />
+
+
         </Routes>
       
     </div>

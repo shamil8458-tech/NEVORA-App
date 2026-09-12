@@ -10,10 +10,12 @@ import { Trash2, Minus, Plus } from "lucide-react";
 import { useQuery ,useMutation} from "@tanstack/react-query";
 import { getcart , removeCartItem , updateCartItem } from "../services/cartService";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Cart() {
 
  const dispatch = useDispatch();
+ const navigate = useNavigate();
 
 const items = useSelector((state) => state.cart.items);
 
@@ -296,7 +298,8 @@ const { mutate: updateItem } = useMutation({
                         </div>
 
 
-                        <button
+                        <button type="button"
+                           onClick={() => navigate("/checkout")}
                             className="mt-7 w-full bg-[#243b2a] px-6 py-4 text-sm font-medium text-white transition hover:bg-[#1c3021]"
                         >
                             PROCEED TO CHECKOUT
