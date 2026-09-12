@@ -5,6 +5,7 @@ import ProductDetails from "../Pages/ProductDetails"
 import Products from "../Pages/Products"
 import Home from "../Pages/Home"
 import Cart from "../Pages/Cart"
+import Wishlist from "../Pages/Wishlist"
 
 function AppRoutes() {
   return (
@@ -18,7 +19,7 @@ function AppRoutes() {
              <Route path="/products" element={<Products/>}/>
              <Route path="/products/:id" element={<ProductDetails/>}/>
              <Route path="/cart" element={<Cart />} />
-
+             <Route path="/wishlist" element={<Wishlist />} />
              
         </Routes>
       

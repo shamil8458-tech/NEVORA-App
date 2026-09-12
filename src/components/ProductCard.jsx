@@ -4,6 +4,8 @@ import { Heart } from "lucide-react";
 import { addToCart } from "../Redux/Slice/CartSlice";
 import { useMutation } from "@tanstack/react-query";
 import { addCartItem } from "../services/cartService";
+import { addToWishlist } from "../Redux/Slice/wishlistSlice";
+import { addWidhListItem } from "../services/wishlistService";
 
 
 
@@ -21,6 +23,14 @@ function ProductCard({product}) {
     },
   })
 
+  const {mutate: addWishlist} = useMutation({
+    mutationFn : addWidhListItem,
+
+    onSuccess: (data) => {
+      dispatch(addToWishlist(data))
+    }
+  })
+
   return (
     <div onClick={() => navigate(`/products/${product.id}`)}
     className="cursor-pointer bg-white">
@@ -35,7 +45,12 @@ function ProductCard({product}) {
       <img src={product.image} alt={product.name} 
       className="h-64 w-full object-cover transition duration-300 hover:scale-105"/>
 
-      <button onClick={(e) => e.stopPropagation()}
+               <button
+               type="button"
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        addWishlist(product);
+                    }}
         className="absolute right-3 top-3 text-gray-700 transition hover:text-gray-500"
         aria-label="Add to wishlist">
           <Heart size={21} strokeWidth={1.5}/>

@@ -105,7 +105,7 @@ function Register() {
                 <div className="relative hidden min-h-screen overflow-hidden md:block">
 
                     <img
-                        src="/Loginpage/register1.png"
+                        src="/Loginpage/Register0.jpeg"
                         alt="Skincare"
                         className="absolute inset-0 h-full w-full object-cover"
                     />

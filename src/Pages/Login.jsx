@@ -186,7 +186,7 @@ function Login() {
                 <div className="relative hidden min-h-screen overflow-hidden md:block">
 
                     <img
-                        src="/Loginpage/LogReg.png"
+                        src="/Loginpage/Login012.png"
                         alt="Skincare"
                         className="absolute inset-0 h-full w-full object-cover"
                     />
@@ -194,7 +194,7 @@ function Login() {
                     <div className="absolute inset-0 bg-black/10"></div>
 
 
-                    <div className="absolute bottom-16 left-12 max-w-sm text-white">
+                    <div className="absolute bottom-16 left-12 max-w-sm text-gray-900">
 
                         <div className="mb-5 flex items-center gap-2">
                             <Leaf size={20} strokeWidth={1.5} />
@@ -213,7 +213,7 @@ function Login() {
                         </h1>
 
 
-                        <p className="mt-5 max-w-xs text-sm leading-6 text-white/80">
+                        <p className="mt-5 max-w-xs text-sm leading-6 text-gray-900">
                             Continue your journey towards healthier,
                             happier skin.
                         </p>

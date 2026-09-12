@@ -195,7 +195,8 @@
       "stock": 16
     }
   ],
-  "orders": [],
   "cart": [],
+  "wishlist": [],
+  "orders": [],
   "$schema": "./node_modules/json-server/schema.json"
 }
