@@ -196,35 +196,6 @@
     }
   ],
   "orders": [],
-  "cart": [
-    {
-      "productId": "11",
-      "name": "Oil Free Water Gel",
-      "brand": "Nevora",
-      "category": "Moisturisers",
-      "price": 399,
-      "originalPrice": 479,
-      "description": "Oil-free water gel moisturiser that feels light on the skin and provides refreshing hydration.",
-      "image": "/Products/Moisturisers3.png",
-      "rating": 4.6,
-      "stock": 21,
-      "quantity": 1,
-      "id": "GGT3IzZtcrk"
-    },
-    {
-      "productId": "6",
-      "name": "Niacinamide Clear Skin Serum",
-      "brand": "Nevora",
-      "category": "Serums",
-      "price": 499,
-      "originalPrice": 599,
-      "description": "Niacinamide serum that helps control excess oil and supports a clearer and healthier-looking complexion.",
-      "image": "/Products/Serum2.png",
-      "rating": 4.6,
-      "stock": 13,
-      "quantity": 1,
-      "id": "FoO5ILCGYNA"
-    }
-  ],
+  "cart": [],
   "$schema": "./node_modules/json-server/schema.json"
 }
