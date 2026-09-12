@@ -2,6 +2,8 @@ import { useNavigate } from "react-router-dom";
 import {useDispatch} from 'react-redux'
 import { Heart } from "lucide-react";
 import { addToCart } from "../Redux/Slice/CartSlice";
+import { useMutation } from "@tanstack/react-query";
+import { addCartItem } from "../services/cartService";
 
 
 
@@ -10,6 +12,14 @@ function ProductCard({product}) {
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
+  const {mutate} = useMutation({
+    mutationFn : addCartItem,
+
+    onSuccess : (data) => {
+      dispatch(addToCart(data))
+    },
+  })
 
   return (
     <div onClick={() => navigate(`/products/${product.id}`)}
@@ -47,13 +57,16 @@ function ProductCard({product}) {
         ₹{product.price}
         </p>
 
-      <button onClick={(e) => {
-        e.stopPropagation();
-        dispatch(addToCart(product))
-      }}
-      className="mt-4 bg-gray-900 px-6 py-2 text-xs font-medium text-white transition hover:bg-gray-500"
-      >Add to Cart
-      </button>
+      <button
+  type="button"
+  onClick={(e) => {
+    e.stopPropagation();
+    mutate(product);
+  }}
+  className="mt-4 bg-gray-900 px-6 py-2 text-xs font-medium text-white transition hover:bg-gray-500"
+>
+  Add to Cart
+</button>
 
            </div>
       
