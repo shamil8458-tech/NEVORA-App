@@ -1,8 +1,12 @@
-import { useSelector } from "react-redux";
+import { useSelector , useDispatch } from "react-redux";
 import {useMutation} from '@tanstack/react-query'
-import { createOder } from '../services/orderService'
+import { createOrder } from '../services/orderService'
+import { clearCart} from '../Redux/Slice/CartSlice'
+import { clearCartItems } from "../services/cartService";
 
 function Checkout() {
+
+    const dispatch = useDispatch();
 
     const items = useSelector((state) => state.cart.items);
 
@@ -11,14 +15,17 @@ function Checkout() {
         0
     );
 
-    const {mutate : placeOrder} = useMutation({
-        mutationFn : createOder,
+const { mutate: placeOrder, isPending } = useMutation({
+    mutationFn: createOrder,
 
-        onSuccess : (data) => {
-            console.log("order placed" , data)
-        },
-    });
+    onSuccess: async (data) => {
+        console.log("Order placed:", data);
 
+        await clearCartItems(items);
+
+        dispatch(clearCart());
+    },
+});
 
     const handlePlaceOrder = () => {
         const order = {
@@ -45,10 +52,13 @@ function Checkout() {
 
         <h2>Total: ₹{totalPrice} </h2>
 
-        <button type="button"
-        onClick={handlePlaceOrder}>
-            Place Order
-        </button>
+      <button
+    type="button"
+    onClick={handlePlaceOrder}
+    disabled={isPending}
+>
+    {isPending ? "Placing Order..." : "Place Order"}
+</button>
       
     </div>
   )

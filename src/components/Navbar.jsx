@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
-import { Search,Heart, ShoppingBag,LogIn,LogOut,Menu,X} from "lucide-react";
+import { Search,Heart, ShoppingBag,User,LogIn,LogOut,Menu,X} from "lucide-react";
 
 import { Logout } from "../Redux/Slice/authSlice";
 
@@ -15,6 +15,8 @@ function Navbar() {
 
   const [search, setSearch] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const [isProfileOpen , setIsProfileOpen] = useState(false)
 
   // Search
   const handleSearch = (e) => {
@@ -125,7 +127,9 @@ function Navbar() {
         </div>
 
         {/* Login / Logout */}
-        <div className="hidden md:block">
+
+        
+         <div className="hidden md:block">
 
           {isAuthenticated ? (
             <button
@@ -145,7 +149,66 @@ function Navbar() {
             </Link>
           )}
 
-        </div>
+        </div> 
+
+
+
+
+        {/* Profile */}
+{/* <div className="relative hidden md:block">
+
+  <button
+    onClick={() => setIsProfileOpen(!isProfileOpen)}
+    className="text-gray-800 transition hover:text-gray-500"
+    aria-label="Profile"
+  >
+    <User size={21} />
+  </button>
+
+  {isProfileOpen && (
+    <div className="absolute right-0 mt-3 w-48 rounded-lg bg-white p-2 shadow-lg">
+
+      {isAuthenticated ? (
+        <>
+          <Link
+            to="/profile"
+            onClick={() => setIsProfileOpen(false)}
+            className="block rounded-md px-4 py-2 text-sm text-gray-800 hover:bg-gray-100"
+          >
+            My Profile
+          </Link>
+
+          <Link
+            to="/orders"
+            onClick={() => setIsProfileOpen(false)}
+            className="block rounded-md px-4 py-2 text-sm text-gray-800 hover:bg-gray-100"
+          >
+            My Orders
+          </Link>
+
+          <button
+            onClick={handleLogout}
+            className="flex w-full items-center gap-2 rounded-md px-4 py-2 text-left text-sm text-gray-800 hover:bg-gray-100"
+          >
+            <LogOut size={17} />
+            Logout
+          </button>
+        </>
+      ) : (
+        <Link
+          to="/login"
+          onClick={() => setIsProfileOpen(false)}
+          className="flex items-center gap-2 rounded-md px-4 py-2 text-sm text-gray-800 hover:bg-gray-100"
+        >
+          <LogIn size={17} />
+          Login
+        </Link>
+      )}
+
+    </div>
+  )}
+
+</div> */}
 
         {/* Mobile Menu Button */}
         <button
@@ -258,6 +321,17 @@ function Navbar() {
                 Login
               </Link>
             )}
+
+
+
+            {/* <Link
+  to={isAuthenticated ? "/profile" : "/login"}
+  onClick={closeMenu}
+  className="text-gray-800"
+  aria-label="Profile"
+>
+  <User size={21} />
+</Link> */}
 
           </div>
 

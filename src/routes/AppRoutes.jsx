@@ -1,3 +1,5 @@
+import ProtectedRoute from "./ProtectedRoute"
+
 import { Route , Routes } from "react-router-dom"
 import Login from "../Pages/Login"
 import Register from "../Pages/Register"
@@ -22,10 +24,28 @@ function AppRoutes() {
              <Route path="/register" element={<Register/>}/>
              <Route path="/products" element={<Products/>}/>
              <Route path="/products/:id" element={<ProductDetails/>}/>
-             <Route path="/cart" element={<Cart />} />
-             <Route path="/wishlist" element={<Wishlist />} />
-             <Route path="/checkout" element={<Checkout />} />
-            <Route path="/orders" element={<Orders />} />
+
+
+             <Route path="/cart" element={
+              <ProtectedRoute>
+                <Cart/>
+              </ProtectedRoute>
+             } />
+             <Route path="/wishlist" element={
+              <ProtectedRoute>
+                <Wishlist />
+              </ProtectedRoute>
+             } />
+             <Route path="/checkout" element={
+              <ProtectedRoute>
+                <Checkout />
+              </ProtectedRoute>
+             } />
+            <Route path="/orders" element={
+              <ProtectedRoute>
+                <Orders />
+              </ProtectedRoute>
+            } />
 
 
         </Routes>

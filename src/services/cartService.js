@@ -126,3 +126,10 @@ export const removeCartItem = async (id) => {
 
     return response.data;
 };
+
+export const clearCartItems = async (items) => {
+    await Promise.all(
+        items.map((item) => 
+        api.delete(`/cart/${item.id}`))
+    );
+};

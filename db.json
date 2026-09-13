@@ -1,16 +1,10 @@
 {
   "users": [
     {
-      "name": "muahmmed shamil",
-      "email": "www.muhammedshamil85@gmail.com",
-      "password": "shamil123",
-      "id": "QRJ4MvfHIAA"
-    },
-    {
-      "name": "hello",
-      "email": "www.muhammedshamil845@gmail.com",
-      "password": "12345",
-      "id": "wqvIGbTpH-4"
+      "name": "shamil",
+      "email": "shamil8458@gmail.com",
+      "password": "shamil12345",
+      "id": "RYMGtOKkQc4"
     }
   ],
   "products": [
@@ -195,7 +189,8 @@
       "stock": 16
     }
   ],
-  "cart": [
+  "cart": [],
+  "wishlist": [
     {
       "productId": "3",
       "name": "Glow Defense SPF 50 Gel",
@@ -207,11 +202,9 @@
       "image": "/Products/Sunscreens2.png",
       "rating": 4.8,
       "stock": 30,
-      "quantity": 3,
-      "id": "G3dUSDbVKaA"
+      "id": "pFQ17sRiIOM"
     }
   ],
-  "wishlist": [],
   "orders": [
     {
       "items": [
@@ -322,6 +315,50 @@
       "status": "pending",
       "createdAt": "2026-09-12T19:36:22.638Z",
       "id": "egdvA5Z7zk4"
+    },
+    {
+      "items": [
+        {
+          "productId": "3",
+          "name": "Glow Defense SPF 50 Gel",
+          "brand": "Nevora",
+          "category": "Sunscreens",
+          "price": 499,
+          "originalPrice": 599,
+          "description": "Non-sticky sunscreen gel with a smooth finish that keeps your skin protected and fresh throughout the day",
+          "image": "/Products/Sunscreens2.png",
+          "rating": 4.8,
+          "stock": 30,
+          "quantity": 3,
+          "id": "G3dUSDbVKaA"
+        }
+      ],
+      "totalPrice": 1497,
+      "status": "pending",
+      "createdAt": "2026-09-12T21:13:40.272Z",
+      "id": "ZnjYmYFt6dE"
+    },
+    {
+      "items": [
+        {
+          "productId": "7",
+          "name": "Aloe Vera Daily Moisturiser",
+          "brand": "Nevora",
+          "category": "Moisturisers",
+          "price": 349,
+          "originalPrice": 429,
+          "description": "Lightweight aloe vera moisturiser that provides everyday hydration and leaves skin soft and comfortable.",
+          "image": "/Products/Moisturisers1.png",
+          "rating": 4.5,
+          "stock": 30,
+          "quantity": 1,
+          "id": "rhcsgl06Ntw"
+        }
+      ],
+      "totalPrice": 349,
+      "status": "pending",
+      "createdAt": "2026-09-12T21:24:57.882Z",
+      "id": "1zql0Iw6l9Y"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

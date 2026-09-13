@@ -10,7 +10,7 @@ export const getOrders = async () => {
     return response.data;
 }
 
-export const createOder = async (order) => {
+export const createOrder = async (order) => {
     const response = await api.post("/orders" , order)
     return response.data;
 }
