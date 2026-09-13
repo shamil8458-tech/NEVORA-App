@@ -5,6 +5,18 @@
       "email": "shamil8458@gmail.com",
       "password": "shamil12345",
       "id": "RYMGtOKkQc4"
+    },
+    {
+      "name": "ibthi",
+      "email": "ibthi8458@gmail.com",
+      "password": "ibshamil123",
+      "id": "5YUlKxjJByY"
+    },
+    {
+      "name": "sabith",
+      "email": "sabith@gmail.com",
+      "password": "sabith123",
+      "id": "WwuF12YtfdM"
     }
   ],
   "products": [
@@ -189,8 +201,122 @@
       "stock": 16
     }
   ],
-  "cart": [],
-  "wishlist": [],
+  "cart": [
+    {
+      "productId": "5",
+      "name": "Vitamin C Brightening Serum",
+      "brand": "Nevora",
+      "category": "Serums",
+      "price": 699,
+      "originalPrice": 799,
+      "description": "Vitamin C serum that helps improve dull-looking skin and gives a brighter and more even appearance.",
+      "image": "/Products/serum1.png",
+      "rating": 4.9,
+      "stock": 17,
+      "quantity": 3,
+      "id": "4K0XW-uW1Pg"
+    }
+  ],
+  "wishlist": [
+    {
+      "userId": "5YUlKxjJByY",
+      "productId": "4",
+      "name": "Hydra Foam Face Cleanser",
+      "brand": "Nevora",
+      "category": "Cleansers",
+      "price": 279,
+      "originalPrice": 329,
+      "description": "Soft foaming cleanser that gently cleans the skin without making it feel dry or tight.",
+      "image": "/Products/Cleansers2.png",
+      "rating": 4.4,
+      "stock": 21,
+      "id": "BmyoDT0rOsU"
+    },
+    {
+      "userId": "5YUlKxjJByY",
+      "productId": "3",
+      "name": "Glow Defense SPF 50 Gel",
+      "brand": "Nevora",
+      "category": "Sunscreens",
+      "price": 499,
+      "originalPrice": 599,
+      "description": "Non-sticky sunscreen gel with a smooth finish that keeps your skin protected and fresh throughout the day",
+      "image": "/Products/Sunscreens2.png",
+      "rating": 4.8,
+      "stock": 30,
+      "id": "7CGZbvQagbY"
+    },
+    {
+      "userId": "5YUlKxjJByY",
+      "productId": "2",
+      "name": "Daily Shield SPF 50 Sunscreen",
+      "brand": "Nevora",
+      "category": "Sunscreens",
+      "price": 449,
+      "originalPrice": 549,
+      "description": "Lightweight SPF 50 sunscreen that protects skin from harmful UV rays without leaving a white cast.",
+      "image": "/Products/Sunscreens1.png",
+      "rating": 4.6,
+      "stock": 28,
+      "id": "11ezU-9YARA"
+    },
+    {
+      "userId": "5YUlKxjJByY",
+      "productId": "1",
+      "name": "Calming Green Tea Face Wash",
+      "brand": "Nevora",
+      "category": "Cleansers",
+      "price": 499,
+      "originalPrice": 599,
+      "description": "Gentle face wash with green tea and aloe vera.",
+      "image": "/Products/Cleansers1.png",
+      "rating": 4.5,
+      "stock": 20,
+      "id": "ciyqgsOd2Vo"
+    },
+    {
+      "userId": "WwuF12YtfdM",
+      "productId": "9",
+      "name": "Nevora Daily Glow Skin Kit",
+      "brand": "Nevora",
+      "category": "Skin Care Kits",
+      "price": 999,
+      "originalPrice": 1249,
+      "description": "Complete skincare kit with cleanser, serum and moisturiser for a simple daily skincare routine.",
+      "image": "/Products/skincarekit3.png",
+      "rating": 4.8,
+      "stock": 12,
+      "id": "tNwUCFpCtso"
+    },
+    {
+      "userId": "WwuF12YtfdM",
+      "productId": "10",
+      "name": "Vitamin C Glow Essentials",
+      "brand": "Nevora",
+      "category": "Best Sellers",
+      "price": 799,
+      "originalPrice": 949,
+      "description": "A customer-favourite combination featuring brightening skincare essentials for a fresh and glowing look.",
+      "image": "/Products/bestseller1.png",
+      "rating": 4.9,
+      "stock": 18,
+      "id": "y6qIr7HSJ-U"
+    },
+    {
+      "userId": "WwuF12YtfdM",
+      "productId": "12",
+      "name": "Hydration Care Kit",
+      "brand": "Nevora",
+      "category": "Skin Care Kits",
+      "price": 999,
+      "originalPrice": 1199,
+      "description": "Hydration-focused skincare kit designed to keep your skin moisturised, soft and fresh throughout the day.",
+      "image": "/Products/skincarekit1.png",
+      "rating": 4.7,
+      "stock": 10,
+      "id": "N0SH3XWJmiA"
+    }
+  ],
   "orders": [
     {
       "items": [
@@ -389,6 +515,159 @@
       "status": "pending",
       "createdAt": "2026-09-13T14:53:13.460Z",
       "id": "BBBtjJCCnrs"
+    },
+    {
+      "items": [
+        {
+          "userId": "5YUlKxjJByY",
+          "productId": "1",
+          "name": "Calming Green Tea Face Wash",
+          "brand": "Nevora",
+          "category": "Cleansers",
+          "price": 499,
+          "originalPrice": 599,
+          "description": "Gentle face wash with green tea and aloe vera.",
+          "image": "/Products/Cleansers1.png",
+          "rating": 4.5,
+          "stock": 20,
+          "quantity": 1,
+          "id": "_c-2NgYP9T4"
+        },
+        {
+          "userId": "5YUlKxjJByY",
+          "productId": "2",
+          "name": "Daily Shield SPF 50 Sunscreen",
+          "brand": "Nevora",
+          "category": "Sunscreens",
+          "price": 449,
+          "originalPrice": 549,
+          "description": "Lightweight SPF 50 sunscreen that protects skin from harmful UV rays without leaving a white cast.",
+          "image": "/Products/Sunscreens1.png",
+          "rating": 4.6,
+          "stock": 28,
+          "quantity": 1,
+          "id": "3VPTLyK123c"
+        },
+        {
+          "userId": "5YUlKxjJByY",
+          "productId": "3",
+          "name": "Glow Defense SPF 50 Gel",
+          "brand": "Nevora",
+          "category": "Sunscreens",
+          "price": 499,
+          "originalPrice": 599,
+          "description": "Non-sticky sunscreen gel with a smooth finish that keeps your skin protected and fresh throughout the day",
+          "image": "/Products/Sunscreens2.png",
+          "rating": 4.8,
+          "stock": 30,
+          "quantity": 1,
+          "id": "b8tOYdh0QAA"
+        },
+        {
+          "userId": "5YUlKxjJByY",
+          "productId": "4",
+          "name": "Hydra Foam Face Cleanser",
+          "brand": "Nevora",
+          "category": "Cleansers",
+          "price": 279,
+          "originalPrice": 329,
+          "description": "Soft foaming cleanser that gently cleans the skin without making it feel dry or tight.",
+          "image": "/Products/Cleansers2.png",
+          "rating": 4.4,
+          "stock": 21,
+          "quantity": 1,
+          "id": "vsIN_Kk8Vis"
+        }
+      ],
+      "totalPrice": 1726,
+      "status": "pending",
+      "createdAt": "2026-09-13T15:41:32.835Z",
+      "userId": "5YUlKxjJByY",
+      "id": "Bbfh8JwVpro"
+    },
+    {
+      "items": [
+        {
+          "userId": "WwuF12YtfdM",
+          "productId": "15",
+          "name": "Complete Daily Skin Care Set",
+          "brand": "Nevora",
+          "category": "Best Sellers",
+          "price": 1099,
+          "originalPrice": 1299,
+          "description": "Popular daily skincare set containing essential products for cleansing, hydration and skin protection.",
+          "image": "/Products/bestseller2.png",
+          "rating": 4.9,
+          "stock": 16,
+          "quantity": 1,
+          "id": "o0xFg-uSce8"
+        },
+        {
+          "userId": "WwuF12YtfdM",
+          "productId": "13",
+          "name": "Nevora Skin Glow Combo",
+          "brand": "Nevora",
+          "category": "Best Sellers",
+          "price": 899,
+          "originalPrice": 1099,
+          "description": "Best-selling skincare combo created to give your daily routine a simple, fresh and glowing finish.",
+          "image": "/Products/skincarekit2.png",
+          "rating": 4.8,
+          "stock": 20,
+          "quantity": 1,
+          "id": "Pods8qA3Rg8"
+        },
+        {
+          "userId": "WwuF12YtfdM",
+          "productId": "12",
+          "name": "Hydration Care Kit",
+          "brand": "Nevora",
+          "category": "Skin Care Kits",
+          "price": 999,
+          "originalPrice": 1199,
+          "description": "Hydration-focused skincare kit designed to keep your skin moisturised, soft and fresh throughout the day.",
+          "image": "/Products/skincarekit1.png",
+          "rating": 4.7,
+          "stock": 10,
+          "quantity": 1,
+          "id": "hYTB-WDZluA"
+        },
+        {
+          "userId": "WwuF12YtfdM",
+          "productId": "10",
+          "name": "Vitamin C Glow Essentials",
+          "brand": "Nevora",
+          "category": "Best Sellers",
+          "price": 799,
+          "originalPrice": 949,
+          "description": "A customer-favourite combination featuring brightening skincare essentials for a fresh and glowing look.",
+          "image": "/Products/bestseller1.png",
+          "rating": 4.9,
+          "stock": 18,
+          "quantity": 1,
+          "id": "MSRukudHpdg"
+        },
+        {
+          "userId": "WwuF12YtfdM",
+          "productId": "9",
+          "name": "Nevora Daily Glow Skin Kit",
+          "brand": "Nevora",
+          "category": "Skin Care Kits",
+          "price": 999,
+          "originalPrice": 1249,
+          "description": "Complete skincare kit with cleanser, serum and moisturiser for a simple daily skincare routine.",
+          "image": "/Products/skincarekit3.png",
+          "rating": 4.8,
+          "stock": 12,
+          "quantity": 1,
+          "id": "tVuXyac_d3E"
+        }
+      ],
+      "totalPrice": 4795,
+      "status": "pending",
+      "createdAt": "2026-09-13T15:43:54.556Z",
+      "userId": "WwuF12YtfdM",
+      "id": "TWr_XIwb7X8"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

@@ -7,7 +7,7 @@ import {
     setCartItems
 } from "../Redux/Slice/CartSlice";
 import { Trash2, Minus, Plus } from "lucide-react";
-import { useQuery ,useMutation} from "@tanstack/react-query";
+import { useQuery ,useMutation , useQueryClient} from "@tanstack/react-query";
 import { getcart , removeCartItem , updateCartItem } from "../services/cartService";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
@@ -16,6 +16,7 @@ function Cart() {
 
  const dispatch = useDispatch();
  const navigate = useNavigate();
+ const queryClient = useQueryClient();
 
 const items = useSelector((state) => state.cart.items);
 
@@ -40,6 +41,7 @@ const { mutate: removeItem } = useMutation({
 
     onSuccess: (_, id) => {
         dispatch(removeFromCart(id));
+        queryClient.invalidateQueries({queryKey :["cart"]})
     },
 });
 
@@ -55,6 +57,7 @@ const { mutate: updateItem } = useMutation({
                 )
             )
         );
+        queryClient.invalidateQueries({queryKey : ["cart"]})
     },
 });
     const totalPrice = items.reduce(

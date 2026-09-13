@@ -73,16 +73,25 @@ const api = axios.create({
 });
 
 export const getcart = async () => {
-    const response = await api.get("/cart");
+    // Logged user data only///
+
+    const  userId = localStorage.getItem("userId");
+    const response = await api.get(`/cart?userId=${userId}`);
     return response.data;
 };
 
 export const addCartItem = async (product) => {
+     
+
+    // specific user//
+
+    const userId = localStorage.getItem("userId")
 
     const response = await api.get("/cart");
 
     const existingItem = response.data.find(
-        (item) => String(item.productId) === String(product.id)
+        (item) => String(item.productId) === String(product.id) &&
+                 String(item.userId) === String(userId)
     );
 
     if (existingItem) {
@@ -97,6 +106,7 @@ export const addCartItem = async (product) => {
     }
 
     const newItem = await api.post("/cart", {
+        userId: userId,
         productId: product.id,
         name: product.name,
         brand: product.brand,

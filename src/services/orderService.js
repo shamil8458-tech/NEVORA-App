@@ -6,11 +6,22 @@ const api = axios.create({
 
 
 export const getOrders = async () => {
-    const response = await api.get("/orders");
+     
+    // unq user find//
+
+    const userId = localStorage.getItem("userId")
+    const response = await api.get(`/orders?userId=${userId}`);
     return response.data;
 }
 
 export const createOrder = async (order) => {
-    const response = await api.post("/orders" , order)
+
+    // unq user///
+
+    const userId = localStorage.getItem("userId")
+    const response = await api.post("/orders" ,{
+         ...order,
+         userId: userId,
+    })
     return response.data;
 }

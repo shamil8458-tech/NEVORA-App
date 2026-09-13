@@ -5,15 +5,24 @@ const api = axios.create({
 })
 
 export const getWishlist = async () => {
-    const response = await api.get("/wishlist");
+
+    //uniq user find//
+
+    const userId = localStorage.getItem("userId")
+    const response = await api.get(`/wishlist?userId=${userId}`);
     return response.data;
 }
 
 export const addWidhListItem = async (product) => {
+
+    // unq user////
+
+    const userId = localStorage.getItem("userId")
     const response = await api.get("/wishlist");
 
     const existingItem = response.data.find(
-        (item) => String(item.productId) === String(product.id)
+        (item) => String(item.productId) === String(product.id) &&
+                 String(item.userId) === String(userId)
     );
 
     if(existingItem){
@@ -21,7 +30,8 @@ export const addWidhListItem = async (product) => {
     }
 
     const newItem = await api.post("/wishlist" , {
-              productId: product.id,
+        userId: userId,
+         productId: product.id,
         name: product.name,
         brand: product.brand,
         category: product.category,
