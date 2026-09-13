@@ -190,21 +190,7 @@
     }
   ],
   "cart": [],
-  "wishlist": [
-    {
-      "productId": "3",
-      "name": "Glow Defense SPF 50 Gel",
-      "brand": "Nevora",
-      "category": "Sunscreens",
-      "price": 499,
-      "originalPrice": 599,
-      "description": "Non-sticky sunscreen gel with a smooth finish that keeps your skin protected and fresh throughout the day",
-      "image": "/Products/Sunscreens2.png",
-      "rating": 4.8,
-      "stock": 30,
-      "id": "pFQ17sRiIOM"
-    }
-  ],
+  "wishlist": [],
   "orders": [
     {
       "items": [
