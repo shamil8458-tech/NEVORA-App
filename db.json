@@ -230,6 +230,21 @@
       "stock": 30,
       "quantity": 1,
       "id": "2RJ-JT0VwQM"
+    },
+    {
+      "userId": null,
+      "productId": "7",
+      "name": "Aloe Vera Daily Moisturiser",
+      "brand": "Nevora",
+      "category": "Moisturisers",
+      "price": 349,
+      "originalPrice": 429,
+      "description": "Lightweight aloe vera moisturiser that provides everyday hydration and leaves skin soft and comfortable.",
+      "image": "/Products/Moisturisers1.png",
+      "rating": 4.5,
+      "stock": 30,
+      "quantity": 1,
+      "id": "tOVmOjuDlQo"
     }
   ],
   "wishlist": [

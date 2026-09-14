@@ -35,3 +35,8 @@ export const loginUser = async (userData) => {
 
     return response.data[0]
 }
+
+export const getUserById = async (id) => {
+   const  response = await api.get(`/users/${id}`)
+   return response.data;
+}

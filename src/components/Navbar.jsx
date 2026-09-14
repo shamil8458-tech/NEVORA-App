@@ -29,7 +29,7 @@ function Navbar() {
   const [search, setSearch] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const [isProfileOpen , setIsProfileOpen] = useState(false)
+  // const [isProfileOpen , setIsProfileOpen] = useState(false)
 
   // Search
   const handleSearch = (e) => {
@@ -119,7 +119,7 @@ function Navbar() {
         </form>
 
         {/* Wishlist + Cart */}
-        <div className="hidden items-center gap-5 md:flex">
+        {/* <div className="hidden items-center gap-5 md:flex">
 
           <Link
            to="/wishlist"
@@ -150,7 +150,56 @@ function Navbar() {
         )}
     </Link>
 
-        </div>
+        </div> */}
+
+
+
+        {/* Wishlist + Cart + Profile */}
+<div className="hidden items-center gap-5 md:flex">
+
+  <Link
+    to="/wishlist"
+    className="relative text-gray-800 transition hover:text-gray-500"
+    aria-label="Wishlist"
+  >
+    <Heart size={21} />
+
+    {wishlistItems.length > 0 && (
+      <span className="absolute -right-2 -top-2 flex h-4 min-w-4 items-center justify-center rounded-full bg-[#243b2a] px-1 text-[10px] text-white">
+        {wishlistItems.length}
+      </span>
+    )}
+  </Link>
+
+
+  <Link
+    to="/cart"
+    className="relative text-gray-800 transition hover:text-gray-500"
+    aria-label="Cart"
+  >
+    <ShoppingBag size={21} />
+
+    {cartItems.length > 0 && (
+      <span className="absolute -right-2 -top-2 flex h-4 min-w-4 items-center justify-center rounded-full bg-[#243b2a] px-1 text-[10px] text-white">
+        {cartItems.length}
+      </span>
+    )}
+  </Link>
+
+
+  {/* Profile */}
+
+  {isAuthenticated && (
+    <Link
+      to="/profile"
+      className="text-gray-800 transition hover:text-gray-500"
+      aria-label="Profile"
+    >
+      <User size={21} />
+    </Link>
+  )}
+
+</div>
 
         {/* Login / Logout */}
 
@@ -177,64 +226,6 @@ function Navbar() {
 
         </div> 
 
-
-
-
-        {/* Profile */}
-{/* <div className="relative hidden md:block">
-
-  <button
-    onClick={() => setIsProfileOpen(!isProfileOpen)}
-    className="text-gray-800 transition hover:text-gray-500"
-    aria-label="Profile"
-  >
-    <User size={21} />
-  </button>
-
-  {isProfileOpen && (
-    <div className="absolute right-0 mt-3 w-48 rounded-lg bg-white p-2 shadow-lg">
-
-      {isAuthenticated ? (
-        <>
-          <Link
-            to="/profile"
-            onClick={() => setIsProfileOpen(false)}
-            className="block rounded-md px-4 py-2 text-sm text-gray-800 hover:bg-gray-100"
-          >
-            My Profile
-          </Link>
-
-          <Link
-            to="/orders"
-            onClick={() => setIsProfileOpen(false)}
-            className="block rounded-md px-4 py-2 text-sm text-gray-800 hover:bg-gray-100"
-          >
-            My Orders
-          </Link>
-
-          <button
-            onClick={handleLogout}
-            className="flex w-full items-center gap-2 rounded-md px-4 py-2 text-left text-sm text-gray-800 hover:bg-gray-100"
-          >
-            <LogOut size={17} />
-            Logout
-          </button>
-        </>
-      ) : (
-        <Link
-          to="/login"
-          onClick={() => setIsProfileOpen(false)}
-          className="flex items-center gap-2 rounded-md px-4 py-2 text-sm text-gray-800 hover:bg-gray-100"
-        >
-          <LogIn size={17} />
-          Login
-        </Link>
-      )}
-
-    </div>
-  )}
-
-</div> */}
 
         {/* Mobile Menu Button */}
         <button

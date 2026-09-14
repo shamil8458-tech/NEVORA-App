@@ -1,6 +1,6 @@
 import ProtectedRoute from "./ProtectedRoute"
-
 import { Route , Routes } from "react-router-dom"
+
 import Login from "../Pages/Login"
 import Register from "../Pages/Register"
 import ProductDetails from "../Pages/ProductDetails"
@@ -10,6 +10,7 @@ import Cart from "../Pages/Cart"
 import Wishlist from "../Pages/Wishlist"
 import Checkout from "../Pages/Checkout"
 import Orders from "../Pages/Orders"
+import Profile from "../Pages/Profile"
 
 
 
@@ -46,6 +47,11 @@ function AppRoutes() {
                 <Orders />
               </ProtectedRoute>
             } />
+            <Route path="/profile" element={
+              <ProtectedRoute>
+                <Profile/>
+              </ProtectedRoute>
+            }/>
 
 
         </Routes>
