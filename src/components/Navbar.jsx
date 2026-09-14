@@ -39,7 +39,8 @@ function Navbar() {
       return;
     }
 
-    navigate(`/products?search=${encodeURIComponent(search.trim())}`);
+   
+    navigate(`/products?search=${search.trim()}`);
     setIsMenuOpen(false);
   };
 
@@ -117,41 +118,6 @@ function Navbar() {
             <Search size={19} />
           </button>
         </form>
-
-        {/* Wishlist + Cart */}
-        {/* <div className="hidden items-center gap-5 md:flex">
-
-          <Link
-           to="/wishlist"
-          className="relative text-gray-800 transition hover:text-gray-500"
-          aria-label="Wishlist"
-          >
-
-            <Heart size={21} />
-            {wishlistItems.length > 0 && (
-              <span className="absolute -right-2 -top-2 flex h-4 min-w-4 items-center justify-center rounded-full bg-[#243b2a] px-1 text-[10px] text-white">
-                  {wishlistItems.length}
-              </span>
-            )}
-          </Link>
-
-         <Link
-         to="/cart"
-         className="relative text-gray-800 transition hover:text-gray-500"
-          aria-label="Cart"
-          >
-
-      <ShoppingBag size={21} />
-
-       {cartItems.length > 0 && (
-         <span className="absolute -right-2 -top-2 flex h-4 min-w-4 items-center justify-center rounded-full bg-[#243b2a] px-1 text-[10px] text-white">
-             {cartItems.length}
-         </span>
-        )}
-    </Link>
-
-        </div> */}
-
 
 
         {/* Wishlist + Cart + Profile */}
