@@ -2,9 +2,10 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-
+import { useQuery } from "@tanstack/react-query";
 import { Search,Heart, ShoppingBag,User,LogIn,LogOut,Menu,X} from "lucide-react";
-
+import { getcart } from "../services/cartService";
+import {getWishlist} from '../services/wishlistService'
 import { Logout } from "../Redux/Slice/authSlice";
 
 function Navbar() {
@@ -12,6 +13,18 @@ function Navbar() {
   const navigate = useNavigate();
 
   const { isAuthenticated } = useSelector((state) => state.auth);
+
+  const {data: cartItems =[]} = useQuery({
+    queryKey : ["cart"],
+    queryFn:getcart,
+    enabled: isAuthenticated,
+  })
+
+  const {data: wishlistItems =[]}= useQuery({
+    queryKey : ["wishlist"],
+    queryFn : getWishlist,
+    enabled: isAuthenticated
+  })
 
   const [search, setSearch] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -109,20 +122,33 @@ function Navbar() {
         <div className="hidden items-center gap-5 md:flex">
 
           <Link
-            to="/wishlist"
-            className="text-gray-800 transition hover:text-gray-500"
-            aria-label="Wishlist"
+           to="/wishlist"
+          className="relative text-gray-800 transition hover:text-gray-500"
+          aria-label="Wishlist"
           >
+
             <Heart size={21} />
+            {wishlistItems.length > 0 && (
+              <span className="absolute -right-2 -top-2 flex h-4 min-w-4 items-center justify-center rounded-full bg-[#243b2a] px-1 text-[10px] text-white">
+                  {wishlistItems.length}
+              </span>
+            )}
           </Link>
 
-          <Link
-            to="/cart"
-            className="text-gray-800 transition hover:text-gray-500"
-            aria-label="Cart"
+         <Link
+         to="/cart"
+         className="relative text-gray-800 transition hover:text-gray-500"
+          aria-label="Cart"
           >
-            <ShoppingBag size={21} />
-          </Link>
+
+      <ShoppingBag size={21} />
+
+       {cartItems.length > 0 && (
+         <span className="absolute -right-2 -top-2 flex h-4 min-w-4 items-center justify-center rounded-full bg-[#243b2a] px-1 text-[10px] text-white">
+             {cartItems.length}
+         </span>
+        )}
+    </Link>
 
         </div>
 

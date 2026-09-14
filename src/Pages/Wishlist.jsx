@@ -2,14 +2,14 @@
 
 import { useSelector, useDispatch } from "react-redux"
 import { useEffect } from "react"
-import { useQuery , useMutation} from "@tanstack/react-query"
+import { useQuery , useMutation , useQueryClient} from "@tanstack/react-query"
 import { getWishlist , removeWishlistItem } from "../services/wishlistService"
 import { setWishlistItems , removeFromWishlist } from "../Redux/Slice/wishlistSlice"
 
 function Wishlist() {
 
     const  dispatch = useDispatch();
-
+    const queryClient = useQueryClient();
     const items = useSelector((state) => state.wishlist.items)
 
     const {data: wishlistData , isLoading , isError} = useQuery({
@@ -23,11 +23,17 @@ function Wishlist() {
         }
     },[wishlistData , dispatch])
 
+
+
     const {mutate : removeItem} = useMutation({
         mutationFn : removeWishlistItem,
 
         onSuccess:(_,id) => {
-            dispatch(removeFromWishlist(id))
+            dispatch(removeFromWishlist(id));
+
+            queryClient.invalidateQueries({
+                queryKey: ["wishlist"],
+            })
         }
     })
 

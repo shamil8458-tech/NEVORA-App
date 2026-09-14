@@ -215,6 +215,21 @@
       "stock": 17,
       "quantity": 3,
       "id": "4K0XW-uW1Pg"
+    },
+    {
+      "userId": "WwuF12YtfdM",
+      "productId": "7",
+      "name": "Aloe Vera Daily Moisturiser",
+      "brand": "Nevora",
+      "category": "Moisturisers",
+      "price": 349,
+      "originalPrice": 429,
+      "description": "Lightweight aloe vera moisturiser that provides everyday hydration and leaves skin soft and comfortable.",
+      "image": "/Products/Moisturisers1.png",
+      "rating": 4.5,
+      "stock": 30,
+      "quantity": 1,
+      "id": "2RJ-JT0VwQM"
     }
   ],
   "wishlist": [
@@ -273,48 +288,6 @@
       "rating": 4.5,
       "stock": 20,
       "id": "ciyqgsOd2Vo"
-    },
-    {
-      "userId": "WwuF12YtfdM",
-      "productId": "9",
-      "name": "Nevora Daily Glow Skin Kit",
-      "brand": "Nevora",
-      "category": "Skin Care Kits",
-      "price": 999,
-      "originalPrice": 1249,
-      "description": "Complete skincare kit with cleanser, serum and moisturiser for a simple daily skincare routine.",
-      "image": "/Products/skincarekit3.png",
-      "rating": 4.8,
-      "stock": 12,
-      "id": "tNwUCFpCtso"
-    },
-    {
-      "userId": "WwuF12YtfdM",
-      "productId": "10",
-      "name": "Vitamin C Glow Essentials",
-      "brand": "Nevora",
-      "category": "Best Sellers",
-      "price": 799,
-      "originalPrice": 949,
-      "description": "A customer-favourite combination featuring brightening skincare essentials for a fresh and glowing look.",
-      "image": "/Products/bestseller1.png",
-      "rating": 4.9,
-      "stock": 18,
-      "id": "y6qIr7HSJ-U"
-    },
-    {
-      "userId": "WwuF12YtfdM",
-      "productId": "12",
-      "name": "Hydration Care Kit",
-      "brand": "Nevora",
-      "category": "Skin Care Kits",
-      "price": 999,
-      "originalPrice": 1199,
-      "description": "Hydration-focused skincare kit designed to keep your skin moisturised, soft and fresh throughout the day.",
-      "image": "/Products/skincarekit1.png",
-      "rating": 4.7,
-      "stock": 10,
-      "id": "N0SH3XWJmiA"
     }
   ],
   "orders": [

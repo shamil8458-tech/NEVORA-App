@@ -2,7 +2,7 @@ import { Camera, Play, ArrowRight } from "lucide-react";
 
 function Footer() {
   return (
- <footer className="bg-[#e4f1e9] px-6 py-10 text-black md:px-10">
+ <footer className="bg-[#ebe7df] px-6 py-10 text-black md:px-10">
 
     <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-5">
           

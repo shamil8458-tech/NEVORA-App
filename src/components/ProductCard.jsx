@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import {useDispatch} from 'react-redux'
 import { Heart } from "lucide-react";
 import { addToCart } from "../Redux/Slice/CartSlice";
-import { useMutation } from "@tanstack/react-query";
+import { useMutation , useQueryClient} from "@tanstack/react-query";
 import { addCartItem } from "../services/cartService";
 import { addToWishlist } from "../Redux/Slice/wishlistSlice";
 import { addWidhListItem } from "../services/wishlistService";
@@ -14,12 +14,17 @@ function ProductCard({product}) {
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const queryClient = useQueryClient();
 
   const {mutate} = useMutation({
     mutationFn : addCartItem,
 
     onSuccess : (data) => {
-      dispatch(addToCart(data))
+      dispatch(addToCart(data));
+
+      queryClient.invalidateQueries({
+        queryKey:["cart"]
+      })
     },
   })
 
@@ -27,7 +32,11 @@ function ProductCard({product}) {
     mutationFn : addWidhListItem,
 
     onSuccess: (data) => {
-      dispatch(addToWishlist(data))
+      dispatch(addToWishlist(data));
+
+      queryClient.invalidateQueries({
+        queryKey : ["wishlist"]
+      })
     }
   })
 
