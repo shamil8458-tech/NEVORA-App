@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 function Products() {
 
-  // const [searchParams] = useSearchParams();
+  
   const [searchParams, setSearchParams] = useSearchParams();
 
   const [sort , setSort] = useState("Default")
@@ -32,8 +32,10 @@ function Products() {
 
   const filterProducts = products.filter((product) => {
     const matchesSearch = product.name.toLowerCase().includes(search.toLowerCase())
-    const matchesCategory = category ? 
-    product.category === category : true;
+    // const matchesCategory = category ? 
+    // product.category === category : true;
+    const matchesCategory = category === "" || product.category === category; 
+   
 
 
     return matchesSearch && matchesCategory
@@ -65,68 +67,10 @@ function Products() {
               </p>
        </div>
 
-       {/* filter/// */}
-
-
-{/* <select
-  value={category}
-  onChange={(e) => {
-    const value = e.target.value;
-
-    if (value) {
-      setSearchParams({
-        ...(search && { search }),
-        category: value,
-      });
-    } else {
-      setSearchParams(search ? { search } : {});
-    }
-  }}
->
-  <option value="">All</option>
-  <option value="Sunscreens">Sunscreen</option>
-  <option value="Serums">Serum</option>
-  <option value="Moisturisers">Moisturiser</option>
-  <option value="Cleansers">Cleansers</option>
-</select>
-
-
-
-
-<select value={sort}
-onChange={(e) => setSort( e.target.value)}>
-    <option value="Low">Low to High</option>
-    <option value="High"> High to Low</option>
-</select> */}
-
-
-
 {/* Filter and Sort */}
 
 <div className="mb-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
 
-  <select
-    value={category}
-    onChange={(e) => {
-      const value = e.target.value;
-
-      if (value) {
-        setSearchParams({
-          ...(search && { search }),
-          category: value,
-        });
-      } else {
-        setSearchParams(search ? { search } : {});
-      }
-    }}
-    className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-700 outline-none transition focus:border-gray-900 sm:w-56"
-  >
-    <option value="">All</option>
-    <option value="Sunscreens">Sunscreen</option>
-    <option value="Serums">Serum</option>
-    <option value="Moisturisers">Moisturiser</option>
-    <option value="Cleansers">Cleansers</option>
-  </select>
 
   <select
     value={sort}

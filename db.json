@@ -23,6 +23,30 @@
       "email": "fayas@gmail.com",
       "password": "fayas123",
       "id": "BU9u1q4l-xQ"
+    },
+    {
+      "name": "muhammed",
+      "email": "muhammed@gmail.com",
+      "password": "muhammed123",
+      "id": "H-lKcu0nvSo"
+    },
+    {
+      "name": "muahmmed shamil",
+      "email": "shamil0@gmail.com",
+      "password": "12345",
+      "id": "70PfACd_5WQ"
+    },
+    {
+      "name": "kali",
+      "email": "kali@gmail.com",
+      "password": "kali123",
+      "id": "Mf7-iwZnAjo"
+    },
+    {
+      "name": "umar",
+      "email": "umar@gmail.com",
+      "password": "umar123",
+      "id": "p5eEqsQ91SU"
     }
   ],
   "products": [
@@ -296,6 +320,36 @@
       "stock": 13,
       "quantity": 3,
       "id": "EEhOPOT8mYM"
+    },
+    {
+      "userId": "Mf7-iwZnAjo",
+      "productId": "7",
+      "name": "Aloe Vera Daily Moisturiser",
+      "brand": "Nevora",
+      "category": "Moisturisers",
+      "price": 349,
+      "originalPrice": 429,
+      "description": "Lightweight aloe vera moisturiser that provides everyday hydration and leaves skin soft and comfortable.",
+      "image": "/Products/Moisturisers1.png",
+      "rating": 4.5,
+      "stock": 30,
+      "quantity": 1,
+      "id": "LSAo8G63iCc"
+    },
+    {
+      "userId": "Mf7-iwZnAjo",
+      "productId": "15",
+      "name": "Complete Daily Skin Care Set",
+      "brand": "Nevora",
+      "category": "Best Sellers",
+      "price": 1099,
+      "originalPrice": 1299,
+      "description": "Popular daily skincare set containing essential products for cleansing, hydration and skin protection.",
+      "image": "/Products/bestseller2.png",
+      "rating": 4.9,
+      "stock": 16,
+      "quantity": 9,
+      "id": "8b_KI4SheFc"
     }
   ],
   "wishlist": [

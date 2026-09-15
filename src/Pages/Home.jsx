@@ -85,7 +85,8 @@ function Home() {
             healthy, fresh and naturally glowing skin.
           </p>
 
-          <button className="mt-7 bg-gray-900 px-7 py-3 text-sm font-medium text-white transition hover:bg-gray-700 rounded-[5px]">
+          <button className="mt-7 bg-gray-900 px-7 py-3 text-sm font-medium text-white transition hover:bg-gray-700 rounded-[5px]"
+          onClick={() => navigate("/products")}>
             Shop Now
           </button>
 

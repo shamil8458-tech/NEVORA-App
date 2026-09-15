@@ -2,6 +2,7 @@ import { useState } from "react";
 import { registerUser } from "../services/userService";
 import { useMutation } from "@tanstack/react-query";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {
     User,
     Mail,
@@ -26,6 +27,7 @@ function Register() {
     const [success, setSuccess] = useState("")
     const [showPassword, setShowPassword] = useState(false)
     const [showConfirmPassword, setShowConfirmPassword] = useState(false)
+    const navigate = useNavigate();
 
 
     const registerMutation = useMutation({
@@ -33,6 +35,7 @@ function Register() {
 
         onSuccess: () => {
             setSuccess("Registration successful!")
+           
             setError("")
 
             setFormData({
@@ -41,6 +44,7 @@ function Register() {
                 password: "",
                 confirmPassword: ""
             })
+             navigate("/login")
         },
 
         onError: (error) => {

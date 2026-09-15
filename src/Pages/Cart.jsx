@@ -1,8 +1,6 @@
 
 import { useDispatch, useSelector } from "react-redux";
 import {
-    increaseQuantity,
-    decreaseQuantity,
     removeFromCart,
     setCartItems
 } from "../Redux/Slice/CartSlice";
