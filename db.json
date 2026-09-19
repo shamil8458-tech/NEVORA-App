@@ -53,6 +53,13 @@
       "email": "bri@gmail.com",
       "password": "bri12345",
       "id": "Yugxntub_lE"
+    },
+     {
+    "id": "admin1",
+     "name": "Admin",
+     "email": "admin@gmail.com",
+     "password": "admin123",
+     "role": "admin"
     }
   ],
   "products": [

@@ -27,7 +27,13 @@ function Login() {
 
         onSuccess: (user) => {
             dispatch(loginUserRedux(user))
-            navigate("/")
+
+            if(user.role === "admin"){
+                navigate("/admin")
+            }else{
+                navigate("/")
+            }
+            
         },
 
         onError: (error) => {
