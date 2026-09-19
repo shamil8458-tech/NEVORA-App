@@ -41,6 +41,10 @@ function ProductCard({product}) {
   })
 
 
+
+  //  whishList icons Toggle///
+
+  
   const {data :wishlistItems = [] } = useQuery({
     queryKey : ["wishlist"],
     queryFn : getWishlist,
@@ -86,18 +90,8 @@ function ProductCard({product}) {
 
       <img src={product.image} alt={product.name} 
       className="h-64 w-full object-cover transition duration-300 hover:scale-105"/>
-{/* 
-               <button
-               type="button"
-                    onClick={(e) => {
-                        e.stopPropagation();
-                        addWishlist(product);
 
-                    }}
-        className="absolute right-3 top-3 text-gray-700 transition hover:text-gray-500"
-        aria-label="Add to wishlist">
-          <Heart size={21} strokeWidth={1.5}/>
-        </button> */}
+  {/* whislist icon/// */}
 
 
         <button
