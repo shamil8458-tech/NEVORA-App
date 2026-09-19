@@ -2,10 +2,10 @@ import { useNavigate } from "react-router-dom";
 import {useDispatch} from 'react-redux'
 import { Heart } from "lucide-react";
 import { addToCart } from "../Redux/Slice/CartSlice";
-import { useMutation , useQueryClient} from "@tanstack/react-query";
+import { useMutation , useQuery, useQueryClient} from "@tanstack/react-query";
 import { addCartItem } from "../services/cartService";
 import { addToWishlist } from "../Redux/Slice/wishlistSlice";
-import { addWidhListItem } from "../services/wishlistService";
+import { getWishlist , addWidhListItem , removeWishlistItem } from "../services/wishlistService";
 
 
 
@@ -40,6 +40,39 @@ function ProductCard({product}) {
     }
   })
 
+
+  const {data :wishlistItems = [] } = useQuery({
+    queryKey : ["wishlist"],
+    queryFn : getWishlist,
+  })
+
+
+  const isWishlisted = wishlistItems.some(
+    (item) => String(item.productId) === String(product.id)
+  );
+
+  const {mutate : toggleWishlist} = useMutation({
+    mutationFn : async () => {
+      const  existingItem = wishlistItems.find(
+        (item) => String(item.productId) === String(product.id)
+      );
+
+      if(existingItem){
+        return removeWishlistItem(existingItem.id)
+      }
+
+      return addWidhListItem(product)
+    },
+
+
+    onSuccess : (data) => {
+      queryClient.invalidateQueries({
+        queryKey : ["wishlist"]
+      })
+    }
+  })
+
+
   return (
     <div onClick={() => navigate(`/products/${product.id}`)}
     className="cursor-pointer bg-white">
@@ -53,16 +86,41 @@ function ProductCard({product}) {
 
       <img src={product.image} alt={product.name} 
       className="h-64 w-full object-cover transition duration-300 hover:scale-105"/>
-
+{/* 
                <button
                type="button"
                     onClick={(e) => {
                         e.stopPropagation();
                         addWishlist(product);
+
                     }}
         className="absolute right-3 top-3 text-gray-700 transition hover:text-gray-500"
         aria-label="Add to wishlist">
           <Heart size={21} strokeWidth={1.5}/>
+        </button> */}
+
+
+        <button
+        type="button"
+        onClick={(e) => {
+          e.stopPropagation();
+          toggleWishlist();
+        }}
+          className={`absolute right-3 top-3 transition ${
+    isWishlisted
+      ? "text-red-500"
+      : "text-gray-700 hover:text-gray-500"
+  }`}
+  aria-label={isWishlisted ? "Remove from wishlist" : "Add to wishlist"}
+
+        >
+
+        <Heart
+        size={21}
+        strokeWidth={1.5}
+        fill={isWishlisted ? "currentColor" : "none"}
+       />
+
         </button>
 
        </div>

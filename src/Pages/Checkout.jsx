@@ -5,10 +5,12 @@ import { useMutation } from "@tanstack/react-query";
 import { createOrder } from "../services/orderService";
 import { clearCart } from "../Redux/Slice/CartSlice";
 import { clearCartItems } from "../services/cartService";
+import { useNavigate } from "react-router-dom";
 
 function Checkout() {
 
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const items = useSelector((state) => state.cart.items);
 
@@ -24,6 +26,9 @@ function Checkout() {
             console.log("Order placed:", data);
 
             await clearCartItems(items);
+
+            navigate("/orders")
+            
 
             dispatch(clearCart());
         },
