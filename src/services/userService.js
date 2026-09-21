@@ -19,6 +19,7 @@ export const registerUser = async (userData) => {
         name : userData.name,
         email : userData.email,
         password : userData.password,
+        role : "user",
     });
     return response.data
 }

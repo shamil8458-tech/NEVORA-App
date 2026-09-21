@@ -6,6 +6,7 @@ import { loginUser } from '../services/userService'
 import { Login as loginUserRedux } from '../Redux/Slice/authSlice'
 import { useState } from 'react'
 import { Mail, Lock, Eye, EyeOff, Leaf, ArrowRight } from 'lucide-react'
+import { adminLogin } from '../admin/redux/slices/adminAuthSlice'
 
 
 function Login() {
@@ -29,6 +30,9 @@ function Login() {
             dispatch(loginUserRedux(user))
 
             if(user.role === "admin"){
+                
+                dispatch(adminLogin(user))
+
                 navigate("/admin")
             }else{
                 navigate("/")

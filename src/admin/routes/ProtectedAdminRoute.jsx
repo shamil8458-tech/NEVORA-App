@@ -3,14 +3,14 @@ import { useSelector } from "react-redux";
 
 
 
-function ProtectedAdminRoute() {
+function ProtectedAdminRoute({ children }) {
 
-    const {isAuthenticated , admin} = useSelector(
+    const {isAuthenticated } = useSelector(
         (state) => state.adminAuth
     );
     
 
-    if(!isAuthenticated || admin?.role !== "admin"){
+    if(!isAuthenticated ){
         return <Navigate to="/login" replace />
     }
  
