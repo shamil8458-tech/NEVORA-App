@@ -54,12 +54,12 @@
       "password": "bri12345",
       "id": "Yugxntub_lE"
     },
-     {
-    "id": "admin1",
-     "name": "Admin",
-     "email": "admin@gmail.com",
-     "password": "admin123",
-     "role": "admin"
+    {
+      "id": "admin1",
+      "name": "Admin",
+      "email": "admin@gmail.com",
+      "password": "admin123",
+      "role": "admin"
     }
   ],
   "products": [
@@ -483,34 +483,6 @@
       "id": "2aV6kEHkq18"
     },
     {
-      "userId": null,
-      "productId": "6",
-      "name": "Niacinamide Clear Skin Serum",
-      "brand": "Nevora",
-      "category": "Serums",
-      "price": 499,
-      "originalPrice": 599,
-      "description": "Niacinamide serum that helps control excess oil and supports a clearer and healthier-looking complexion.",
-      "image": "/Products/Serum2.png",
-      "rating": 4.6,
-      "stock": 13,
-      "id": "FgV16avXBaE"
-    },
-    {
-      "userId": null,
-      "productId": "7",
-      "name": "Aloe Vera Daily Moisturiser",
-      "brand": "Nevora",
-      "category": "Moisturisers",
-      "price": 349,
-      "originalPrice": 429,
-      "description": "Lightweight aloe vera moisturiser that provides everyday hydration and leaves skin soft and comfortable.",
-      "image": "/Products/Moisturisers1.png",
-      "rating": 4.5,
-      "stock": 30,
-      "id": "Fh9h_4zbWJg"
-    },
-    {
       "userId": "Yugxntub_lE",
       "productId": "3",
       "name": "Glow Defense SPF 50 Gel",
@@ -565,6 +537,34 @@
       "rating": 4.4,
       "stock": 21,
       "id": "LLEXs-A11xs"
+    },
+    {
+      "userId": "5YUlKxjJByY",
+      "productId": "7",
+      "name": "Aloe Vera Daily Moisturiser",
+      "brand": "Nevora",
+      "category": "Moisturisers",
+      "price": 349,
+      "originalPrice": 429,
+      "description": "Lightweight aloe vera moisturiser that provides everyday hydration and leaves skin soft and comfortable.",
+      "image": "/Products/Moisturisers1.png",
+      "rating": 4.5,
+      "stock": 30,
+      "id": "qRUoCxn5IYI"
+    },
+    {
+      "userId": "5YUlKxjJByY",
+      "productId": "6",
+      "name": "Niacinamide Clear Skin Serum",
+      "brand": "Nevora",
+      "category": "Serums",
+      "price": 499,
+      "originalPrice": 599,
+      "description": "Niacinamide serum that helps control excess oil and supports a clearer and healthier-looking complexion.",
+      "image": "/Products/Serum2.png",
+      "rating": 4.6,
+      "stock": 13,
+      "id": "4xPZwJJr3L8"
     }
   ],
   "orders": [

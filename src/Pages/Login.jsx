@@ -27,7 +27,7 @@ function Login() {
         mutationFn: loginUser,
 
         onSuccess: (user) => {
-            dispatch(loginUserRedux(user))
+           
 
             if(user.role === "admin"){
                 
@@ -35,6 +35,7 @@ function Login() {
 
                 navigate("/admin")
             }else{
+                 dispatch(loginUserRedux(user))
                 navigate("/")
             }
             
