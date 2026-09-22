@@ -6,6 +6,7 @@ import { deleteProduct } from '../services/adminProductService'
 import ProductForm from '../components/ProductForm'
 import ProductTable from '../components/ProductTable'
 import { useState } from 'react'
+import Pagination from '../components/Pagination'
 
 
 function Products() {
@@ -14,9 +15,20 @@ function Products() {
   const queryClient = useQueryClient();
 
   const [selectProducts , setSelectProduct] = useState(null)
+  const [currentPage , setCurrentPage] = useState(1);
 
 
   const products = useSelector((state) => state.adminProducts.products);
+
+    const productsPerPage = 10;
+
+  const totalPages = Math.ceil(products.length / productsPerPage);
+
+
+  const currentProducts = products.slice(
+    (currentPage - 1) * productsPerPage,
+    currentPage * productsPerPage
+  );
 
 
   const {isLoading , isError} = useQuery({
@@ -67,10 +79,22 @@ function Products() {
       <ProductForm editProduct={selectProducts}/>
 
       
-      <ProductTable 
+      {/* <ProductTable 
       products={products}
       onEdit={setSelectProduct}
+      onDelete={handleDelete}/> */}
+
+
+      <ProductTable 
+      products={currentProducts}
+      onEdit={setSelectProduct}
       onDelete={handleDelete}/>
+
+
+      <Pagination
+      currentPage={currentPage}
+      totalPage={totalPages}
+      onPageChange={setCurrentPage}/>
 
       
     </div>
