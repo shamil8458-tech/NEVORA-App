@@ -4,62 +4,72 @@
       "name": "shamil",
       "email": "shamil8458@gmail.com",
       "password": "shamil12345",
-      "id": "RYMGtOKkQc4"
+      "id": "RYMGtOKkQc4",
+      "isBlocked": true
     },
     {
       "name": "ibthi",
       "email": "ibthi8458@gmail.com",
       "password": "ibshamil123",
+      "isBlocked": true,
       "id": "5YUlKxjJByY"
     },
     {
       "name": "sabith",
       "email": "sabith@gmail.com",
       "password": "sabith123",
-      "id": "WwuF12YtfdM"
+      "id": "WwuF12YtfdM",
+      "isBlocked": false
     },
     {
       "name": "fayas",
       "email": "fayas@gmail.com",
       "password": "fayas123",
-      "id": "BU9u1q4l-xQ"
+      "id": "BU9u1q4l-xQ",
+      "isBlocked": true
     },
     {
       "name": "muhammed",
       "email": "muhammed@gmail.com",
       "password": "muhammed123",
-      "id": "H-lKcu0nvSo"
+      "id": "H-lKcu0nvSo",
+      "isBlocked": true
     },
     {
       "name": "muahmmed shamil",
       "email": "shamil0@gmail.com",
       "password": "12345",
-      "id": "70PfACd_5WQ"
+      "id": "70PfACd_5WQ",
+      "isBlocked": false
     },
     {
       "name": "kali",
       "email": "kali@gmail.com",
       "password": "kali123",
-      "id": "Mf7-iwZnAjo"
+      "id": "Mf7-iwZnAjo",
+      "isBlocked": false
     },
     {
       "name": "umar",
       "email": "umar@gmail.com",
       "password": "umar123",
-      "id": "p5eEqsQ91SU"
+      "id": "p5eEqsQ91SU",
+      "isBlocked": false
     },
     {
       "name": "bri",
       "email": "bri@gmail.com",
       "password": "bri12345",
-      "id": "Yugxntub_lE"
+      "id": "Yugxntub_lE",
+      "isBlocked": false
     },
     {
       "id": "admin1",
       "name": "Admin",
       "email": "admin@gmail.com",
       "password": "admin123",
-      "role": "admin"
+      "role": "admin",
+      "isBlocked": false
     }
   ],
   "products": [

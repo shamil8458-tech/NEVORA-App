@@ -34,7 +34,13 @@ export const loginUser = async (userData) => {
         throw new Error("Invalid email or password!");
     }
 
-    return response.data[0]
+ const user =  response.data[0]
+
+ if(user.isBlocked){
+    throw new Error("Your account has been blocked!")
+ }
+ return user
+    
 }
 
 export const getUserById = async (id) => {

@@ -6,6 +6,7 @@ import wishlistReducer from '../Slice/wishlistSlice'
 
 import adminAuthReducer from  "../../admin/redux/slices/adminAuthSlice"
 import adminProductReducer from '../../admin/redux/slices/adminProductSlice'
+import adminUserReducer from '../../admin/redux/slices/adminUserSlice'
 
 const store = configureStore({
     reducer : {
@@ -15,6 +16,7 @@ const store = configureStore({
 
         adminAuth : adminAuthReducer,
         adminProducts : adminProductReducer,
+        adminUsers : adminUserReducer,
     }
 
 })
