@@ -13,7 +13,7 @@ function AdminRoutes() {
 
         <Route element={<ProtectedAdminRoute/>}>
 
-        <Route path='/admin' element={<Orders/>}/>
+        <Route path='/admin' element={<Dashboard/>}/>
         {/* <Route path='/admin' element={<Dashboard/>}/>
         <Route path='/admin/products' element={<Products/>}/> */}
         {/* <Route path='/admin/users' element={<Users/>}/> */}
