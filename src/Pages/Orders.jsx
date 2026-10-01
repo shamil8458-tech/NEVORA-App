@@ -58,7 +58,7 @@ function Orders() {
         {/* Header/// */}
 
         <div className="mb-12 text-center">
-            <p className="text-xs uppercase tracking-[0.25] text-gray-500">
+            <p className="text-xs uppercase tracking-[0.25em] text-gray-500">
                  Your Collection
             </p>
 

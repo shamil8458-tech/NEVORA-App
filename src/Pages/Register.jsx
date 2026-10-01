@@ -1,3 +1,4 @@
+import toast from "react-hot-toast";
 import { useState } from "react";
 import { registerUser } from "../services/userService";
 import { useMutation } from "@tanstack/react-query";
@@ -34,9 +35,11 @@ function Register() {
         mutationFn: registerUser,
 
         onSuccess: () => {
-            setSuccess("Registration successful!")
+              
+            toast.success("Registration successful!");
+
+            setSuccess("")
            
-            setError("")
 
             setFormData({
                 name: "",
@@ -48,7 +51,7 @@ function Register() {
         },
 
         onError: (error) => {
-            setError(error.message)
+            toast.error(error.message)
             setSuccess("")
         },
     })

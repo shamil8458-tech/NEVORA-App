@@ -1,3 +1,4 @@
+import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import {useDispatch} from 'react-redux'
 import { Heart } from "lucide-react";
@@ -25,20 +26,26 @@ function ProductCard({product}) {
       queryClient.invalidateQueries({
         queryKey:["cart"]
       })
+
+       toast.success("Product added to cart!");
     },
-  })
 
-  const {mutate: addWishlist} = useMutation({
-    mutationFn : addWidhListItem,
-
-    onSuccess: (data) => {
-      dispatch(addToWishlist(data));
-
-      queryClient.invalidateQueries({
-        queryKey : ["wishlist"]
-      })
+    onError:(error) => {
+      toast.error(error.message || "Failed to add product to cart");
     }
   })
+
+  // const {mutate: addWishlist} = useMutation({
+  //   mutationFn : addWidhListItem,
+
+  //   onSuccess: (data) => {
+  //     dispatch(addToWishlist(data));
+
+  //     queryClient.invalidateQueries({
+  //       queryKey : ["wishlist"]
+  //     })
+  //   }
+  // })
 
 
 
@@ -73,7 +80,17 @@ function ProductCard({product}) {
       queryClient.invalidateQueries({
         queryKey : ["wishlist"]
       })
-    }
+
+         toast.success(
+      isWishlisted
+        ? "Removed from wishlist!"
+        : "Added to wishlist!"
+    );
+    },
+
+      onError: (error) => {
+    toast.error(error.message || "Wishlist update failed");
+  }
   })
 
 

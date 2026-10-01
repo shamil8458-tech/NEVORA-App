@@ -1,4 +1,4 @@
-
+import toast from "react-hot-toast";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
@@ -49,6 +49,7 @@ function Navbar() {
     dispatch(Logout());
     navigate("/login");
     setIsMenuOpen(false);
+     toast.success("Logged out successfully");
   };
 
   const closeMenu = () => {

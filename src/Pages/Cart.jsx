@@ -1,4 +1,4 @@
-
+import toast from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
 import {
     removeFromCart,
@@ -40,7 +40,12 @@ const { mutate: removeItem } = useMutation({
     onSuccess: (_, id) => {
         dispatch(removeFromCart(id));
         queryClient.invalidateQueries({queryKey :["cart"]})
+        toast.success("Product removed from cart!");
     },
+        onError: (error) => {
+        toast.error(error.message || "Failed to remove product");
+    },
+    
 });
 
 
@@ -56,6 +61,10 @@ const { mutate: updateItem } = useMutation({
             )
         );
         queryClient.invalidateQueries({queryKey : ["cart"]})
+         
+    },
+      onError: (error) => {
+        toast.error(error.message || "Failed to update cart");
     },
 });
     const totalPrice = items.reduce(

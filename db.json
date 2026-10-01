@@ -26,21 +26,21 @@
       "email": "fayas@gmail.com",
       "password": "fayas123",
       "id": "BU9u1q4l-xQ",
-      "isBlocked": true
+      "isBlocked": false
     },
     {
       "name": "muhammed",
       "email": "muhammed@gmail.com",
       "password": "muhammed123",
       "id": "H-lKcu0nvSo",
-      "isBlocked": true
+      "isBlocked": false
     },
     {
       "name": "muahmmed shamil",
       "email": "shamil0@gmail.com",
       "password": "12345",
       "id": "70PfACd_5WQ",
-      "isBlocked": true
+      "isBlocked": false
     },
     {
       "name": "kali",
@@ -70,6 +70,27 @@
       "password": "admin123",
       "role": "admin",
       "isBlocked": false
+    },
+    {
+      "name": "fan",
+      "email": "fan@gmail.com",
+      "password": "fan123",
+      "role": "user",
+      "id": "beJVklEVg4I"
+    },
+    {
+      "name": "dsegb",
+      "email": "abc@gmail.com",
+      "password": "abc123",
+      "role": "user",
+      "id": "7HRG88CaOHQ"
+    },
+    {
+      "name": "van",
+      "email": "van@gmail.com",
+      "password": "van123",
+      "role": "user",
+      "id": "zrd7IGtycIM"
     }
   ],
   "products": [
@@ -252,6 +273,18 @@
       "image": "/Products/bestseller2.png",
       "rating": 4.9,
       "stock": 16
+    },
+    {
+      "name": "skin care",
+      "brand": "Nevora",
+      "category": "serum",
+      "price": "53555",
+      "originalPrice": "35554",
+      "description": "dfrtgesagaytaeeg",
+      "image": "",
+      "rating": "5",
+      "stock": "5",
+      "id": "PLNDTLY_2qI"
     }
   ],
   "cart": [
@@ -478,34 +511,6 @@
       "id": "LLEXs-A11xs"
     },
     {
-      "userId": "5YUlKxjJByY",
-      "productId": "7",
-      "name": "Aloe Vera Daily Moisturiser",
-      "brand": "Nevora",
-      "category": "Moisturisers",
-      "price": 349,
-      "originalPrice": 429,
-      "description": "Lightweight aloe vera moisturiser that provides everyday hydration and leaves skin soft and comfortable.",
-      "image": "/Products/Moisturisers1.png",
-      "rating": 4.5,
-      "stock": 30,
-      "id": "qRUoCxn5IYI"
-    },
-    {
-      "userId": "5YUlKxjJByY",
-      "productId": "6",
-      "name": "Niacinamide Clear Skin Serum",
-      "brand": "Nevora",
-      "category": "Serums",
-      "price": 499,
-      "originalPrice": 599,
-      "description": "Niacinamide serum that helps control excess oil and supports a clearer and healthier-looking complexion.",
-      "image": "/Products/Serum2.png",
-      "rating": 4.6,
-      "stock": 13,
-      "id": "4xPZwJJr3L8"
-    },
-    {
       "userId": null,
       "productId": "3",
       "name": "Glow Defense SPF 50 Gel",
@@ -518,48 +523,6 @@
       "rating": 4.8,
       "stock": 30,
       "id": "T23L5lZOnJc"
-    },
-    {
-      "userId": "5YUlKxjJByY",
-      "productId": "2",
-      "name": "Daily Shield SPF 50 Sunscreen",
-      "brand": "Nevora",
-      "category": "Sunscreens",
-      "price": 449,
-      "originalPrice": 549,
-      "description": "Lightweight SPF 50 sunscreen that protects skin from harmful UV rays without leaving a white cast.",
-      "image": "/Products/Sunscreens1.png",
-      "rating": 4.6,
-      "stock": 28,
-      "id": "G5OtEK0_ZbI"
-    },
-    {
-      "userId": "5YUlKxjJByY",
-      "productId": "3",
-      "name": "Glow Defense SPF 50 Gel",
-      "brand": "Nevora",
-      "category": "Sunscreens",
-      "price": 499,
-      "originalPrice": 599,
-      "description": "Non-sticky sunscreen gel with a smooth finish that keeps your skin protected and fresh throughout the day",
-      "image": "/Products/Sunscreens2.png",
-      "rating": 4.8,
-      "stock": 30,
-      "id": "H6E7vTNAlgk"
-    },
-    {
-      "userId": "5YUlKxjJByY",
-      "productId": "4",
-      "name": "Hydra Foam Face Cleanser",
-      "brand": "Nevora",
-      "category": "Cleansers",
-      "price": 279,
-      "originalPrice": 329,
-      "description": "Soft foaming cleanser that gently cleans the skin without making it feel dry or tight.",
-      "image": "/Products/Cleansers2.png",
-      "rating": 4.4,
-      "stock": 21,
-      "id": "KHb_dw27o3k"
     }
   ],
   "orders": [
@@ -597,7 +560,7 @@
         }
       ],
       "totalPrice": 1776,
-      "status": "delivered",
+      "status": "shipped",
       "createdAt": "2026-09-14T07:22:29.786Z",
       "userId": "5YUlKxjJByY",
       "id": "iNl7GRE1kNA"
@@ -675,7 +638,7 @@
         }
       ],
       "totalPrice": 349,
-      "status": "pending",
+      "status": "confirmed",
       "createdAt": "2026-09-14T14:07:03.478Z",
       "userId": "5YUlKxjJByY",
       "id": "yZfjf5qgu5U"
@@ -699,7 +662,7 @@
         }
       ],
       "totalPrice": 279,
-      "status": "pending",
+      "status": "confirmed",
       "createdAt": "2026-09-15T08:09:58.675Z",
       "userId": "5YUlKxjJByY",
       "id": "tOXvlT1MJ9U"
@@ -762,7 +725,7 @@
         }
       ],
       "totalPrice": 499,
-      "status": "pending",
+      "status": "delivered",
       "createdAt": "2026-09-15T10:18:53.997Z",
       "userId": "5YUlKxjJByY",
       "id": "n-ZoRlm2-E0"
@@ -770,7 +733,7 @@
     {
       "items": [],
       "totalPrice": 0,
-      "status": "pending",
+      "status": "delivered",
       "createdAt": "2026-09-15T10:21:04.757Z",
       "userId": "5YUlKxjJByY",
       "id": "LR6Xcv8fGL4"
@@ -833,10 +796,436 @@
         }
       ],
       "totalPrice": 2994,
-      "status": "pending",
+      "status": "delivered",
       "createdAt": "2026-09-24T04:41:38.225Z",
       "userId": "5YUlKxjJByY",
       "id": "X_PTWwhe7Jk"
+    },
+    {
+      "items": [
+        {
+          "userId": "5YUlKxjJByY",
+          "productId": "7",
+          "name": "Aloe Vera Daily Moisturiser",
+          "brand": "Nevora",
+          "category": "Moisturisers",
+          "price": 349,
+          "originalPrice": 429,
+          "description": "Lightweight aloe vera moisturiser that provides everyday hydration and leaves skin soft and comfortable.",
+          "image": "/Products/Moisturisers1.png",
+          "rating": 4.5,
+          "stock": 30,
+          "quantity": 1,
+          "id": "kj2PQ5PnuPA"
+        },
+        {
+          "userId": "5YUlKxjJByY",
+          "productId": "8",
+          "name": "Ceramide Barrier Cream",
+          "brand": "Nevora",
+          "category": "Moisturisers",
+          "price": 499,
+          "originalPrice": 549,
+          "description": "Rich ceramide moisturiser that helps support the skin barrier and provides long-lasting hydration.",
+          "image": "/Products/Moisturisers2.png",
+          "rating": 4.8,
+          "stock": 21,
+          "quantity": 1,
+          "id": "sFoogT9ILj4"
+        },
+        {
+          "userId": "5YUlKxjJByY",
+          "productId": "6",
+          "name": "Niacinamide Clear Skin Serum",
+          "brand": "Nevora",
+          "category": "Serums",
+          "price": 499,
+          "originalPrice": 599,
+          "description": "Niacinamide serum that helps control excess oil and supports a clearer and healthier-looking complexion.",
+          "image": "/Products/Serum2.png",
+          "rating": 4.6,
+          "stock": 13,
+          "quantity": 1,
+          "id": "NhpQ--1bMzY"
+        },
+        {
+          "userId": "5YUlKxjJByY",
+          "productId": "5",
+          "name": "Vitamin C Brightening Serum",
+          "brand": "Nevora",
+          "category": "Serums",
+          "price": 699,
+          "originalPrice": 799,
+          "description": "Vitamin C serum that helps improve dull-looking skin and gives a brighter and more even appearance.",
+          "image": "/Products/serum1.png",
+          "rating": 4.9,
+          "stock": 17,
+          "quantity": 1,
+          "id": "71K-6s8IS18"
+        }
+      ],
+      "totalPrice": 2046,
+      "status": "delivered",
+      "createdAt": "2026-09-27T15:58:52.685Z",
+      "userId": "5YUlKxjJByY",
+      "id": "5bcxBEkJuCo"
+    },
+    {
+      "items": [
+        {
+          "userId": "5YUlKxjJByY",
+          "productId": "9",
+          "name": "Nevora Daily Glow Skin Kit",
+          "brand": "Nevora",
+          "category": "Skin Care Kits",
+          "price": 999,
+          "originalPrice": 1249,
+          "description": "Complete skincare kit with cleanser, serum and moisturiser for a simple daily skincare routine.",
+          "image": "/Products/skincarekit3.png",
+          "rating": 4.8,
+          "stock": 12,
+          "quantity": 1,
+          "id": "W7hWXuU88Ys"
+        },
+        {
+          "userId": "5YUlKxjJByY",
+          "productId": "15",
+          "name": "Complete Daily Skin Care Set",
+          "brand": "Nevora",
+          "category": "Best Sellers",
+          "price": 1099,
+          "originalPrice": 1299,
+          "description": "Popular daily skincare set containing essential products for cleansing, hydration and skin protection.",
+          "image": "/Products/bestseller2.png",
+          "rating": 4.9,
+          "stock": 16,
+          "quantity": 1,
+          "id": "f0RLgDssjI4"
+        },
+        {
+          "userId": "5YUlKxjJByY",
+          "productId": "10",
+          "name": "Vitamin C Glow Essentials",
+          "brand": "Nevora",
+          "category": "Best Sellers",
+          "price": 799,
+          "originalPrice": 949,
+          "description": "A customer-favourite combination featuring brightening skincare essentials for a fresh and glowing look.",
+          "image": "/Products/bestseller1.png",
+          "rating": 4.9,
+          "stock": 18,
+          "quantity": 1,
+          "id": "Dg1Eq96_I_k"
+        }
+      ],
+      "totalPrice": 2897,
+      "status": "pending",
+      "createdAt": "2026-09-28T18:29:52.093Z",
+      "userId": "5YUlKxjJByY",
+      "id": "3ZiHR-zLi_M"
+    },
+    {
+      "items": [
+        {
+          "userId": "WwuF12YtfdM",
+          "productId": "8",
+          "name": "Ceramide Barrier Cream",
+          "brand": "Nevora",
+          "category": "Moisturisers",
+          "price": 499,
+          "originalPrice": 549,
+          "description": "Rich ceramide moisturiser that helps support the skin barrier and provides long-lasting hydration.",
+          "image": "/Products/Moisturisers2.png",
+          "rating": 4.8,
+          "stock": 21,
+          "quantity": 1,
+          "id": "kXF8BSeRfkw"
+        }
+      ],
+      "totalPrice": 499,
+      "status": "pending",
+      "createdAt": "2026-09-28T18:30:31.540Z",
+      "userId": "WwuF12YtfdM",
+      "id": "-6SQftxOsbA"
+    },
+    {
+      "items": [
+        {
+          "userId": "5YUlKxjJByY",
+          "productId": "7",
+          "name": "Aloe Vera Daily Moisturiser",
+          "brand": "Nevora",
+          "category": "Moisturisers",
+          "price": 349,
+          "originalPrice": 429,
+          "description": "Lightweight aloe vera moisturiser that provides everyday hydration and leaves skin soft and comfortable.",
+          "image": "/Products/Moisturisers1.png",
+          "rating": 4.5,
+          "stock": 30,
+          "quantity": 3,
+          "id": "va9AYnFUhOI"
+        }
+      ],
+      "totalPrice": 1047,
+      "status": "pending",
+      "createdAt": "2026-09-29T09:52:03.371Z",
+      "userId": "5YUlKxjJByY",
+      "id": "4EzRKLEZM68"
+    },
+    {
+      "items": [
+        {
+          "userId": "5YUlKxjJByY",
+          "productId": "8",
+          "name": "Ceramide Barrier Cream",
+          "brand": "Nevora",
+          "category": "Moisturisers",
+          "price": 499,
+          "originalPrice": 549,
+          "description": "Rich ceramide moisturiser that helps support the skin barrier and provides long-lasting hydration.",
+          "image": "/Products/Moisturisers2.png",
+          "rating": 4.8,
+          "stock": 21,
+          "quantity": 4,
+          "id": "161o-ALH0no"
+        }
+      ],
+      "totalPrice": 1996,
+      "status": "pending",
+      "createdAt": "2026-09-29T14:40:15.171Z",
+      "userId": "5YUlKxjJByY",
+      "id": "idd1Sg0V_aM"
+    },
+    {
+      "items": [
+        {
+          "userId": "5YUlKxjJByY",
+          "productId": "8",
+          "name": "Ceramide Barrier Cream",
+          "brand": "Nevora",
+          "category": "Moisturisers",
+          "price": 499,
+          "originalPrice": 549,
+          "description": "Rich ceramide moisturiser that helps support the skin barrier and provides long-lasting hydration.",
+          "image": "/Products/Moisturisers2.png",
+          "rating": 4.8,
+          "stock": 21,
+          "quantity": 5,
+          "id": "161o-ALH0no"
+        },
+        {
+          "userId": "5YUlKxjJByY",
+          "productId": "10",
+          "name": "Vitamin C Glow Essentials",
+          "brand": "Nevora",
+          "category": "Best Sellers",
+          "price": 799,
+          "originalPrice": 949,
+          "description": "A customer-favourite combination featuring brightening skincare essentials for a fresh and glowing look.",
+          "image": "/Products/bestseller1.png",
+          "rating": 4.9,
+          "stock": 18,
+          "quantity": 1,
+          "id": "qinDscnxVSo"
+        },
+        {
+          "userId": "5YUlKxjJByY",
+          "productId": "3",
+          "name": "Glow Defense SPF 50 Gel",
+          "brand": "Nevora",
+          "category": "Sunscreens",
+          "price": 499,
+          "originalPrice": 599,
+          "description": "Non-sticky sunscreen gel with a smooth finish that keeps your skin protected and fresh throughout the day",
+          "image": "/Products/Sunscreens2.png",
+          "rating": 4.8,
+          "stock": 30,
+          "quantity": 1,
+          "id": "Q83VBA8lYrk"
+        },
+        {
+          "userId": "5YUlKxjJByY",
+          "productId": "2",
+          "name": "Daily Shield SPF 50 Sunscreen",
+          "brand": "Nevora",
+          "category": "Sunscreens",
+          "price": 449,
+          "originalPrice": 549,
+          "description": "Lightweight SPF 50 sunscreen that protects skin from harmful UV rays without leaving a white cast.",
+          "image": "/Products/Sunscreens1.png",
+          "rating": 4.6,
+          "stock": 28,
+          "quantity": 1,
+          "id": "yT-ifKf_WWk"
+        }
+      ],
+      "totalPrice": 4242,
+      "status": "pending",
+      "createdAt": "2026-10-01T06:21:22.507Z",
+      "userId": "5YUlKxjJByY",
+      "id": "PNp4s06pbqY"
+    },
+    {
+      "items": [
+        {
+          "userId": "5YUlKxjJByY",
+          "productId": "7",
+          "name": "Aloe Vera Daily Moisturiser",
+          "brand": "Nevora",
+          "category": "Moisturisers",
+          "price": 349,
+          "originalPrice": 429,
+          "description": "Lightweight aloe vera moisturiser that provides everyday hydration and leaves skin soft and comfortable.",
+          "image": "/Products/Moisturisers1.png",
+          "rating": 4.5,
+          "stock": 30,
+          "quantity": 1,
+          "id": "5SN4ZBV2F_U"
+        }
+      ],
+      "totalPrice": 349,
+      "status": "pending",
+      "createdAt": "2026-10-01T08:10:48.410Z",
+      "customer": {
+        "name": "Muhammed shamil S",
+        "email": "www.muhammedshamil85@gmail.com",
+        "phone": "2234524443",
+        "address": "ahfieeiuwyeafi7uw",
+        "city": "mallapura,m",
+        "pincode": "12323"
+      },
+      "paymentMethod": "online",
+      "userId": "5YUlKxjJByY",
+      "id": "A5wG0X7J-Ic"
+    },
+    {
+      "items": [
+        {
+          "userId": "5YUlKxjJByY",
+          "productId": "2",
+          "name": "Daily Shield SPF 50 Sunscreen",
+          "brand": "Nevora",
+          "category": "Sunscreens",
+          "price": 449,
+          "originalPrice": 549,
+          "description": "Lightweight SPF 50 sunscreen that protects skin from harmful UV rays without leaving a white cast.",
+          "image": "/Products/Sunscreens1.png",
+          "rating": 4.6,
+          "stock": 28,
+          "quantity": 1,
+          "id": "fRcnK4nY71U"
+        }
+      ],
+      "totalPrice": 449,
+      "status": "pending",
+      "createdAt": "2026-10-01T08:12:01.412Z",
+      "customer": {
+        "name": "Muhammed shamil S",
+        "email": "www.muhammedshamil85@gmail.com",
+        "phone": "9567318458",
+        "address": "matttra",
+        "city": "mallapura,m",
+        "pincode": "12323"
+      },
+      "paymentMethod": "cod",
+      "userId": "5YUlKxjJByY",
+      "id": "0jAZlDSlLnM"
+    },
+    {
+      "items": [
+        {
+          "userId": "5YUlKxjJByY",
+          "productId": "4",
+          "name": "Hydra Foam Face Cleanser",
+          "brand": "Nevora",
+          "category": "Cleansers",
+          "price": 279,
+          "originalPrice": 329,
+          "description": "Soft foaming cleanser that gently cleans the skin without making it feel dry or tight.",
+          "image": "/Products/Cleansers2.png",
+          "rating": 4.4,
+          "stock": 21,
+          "quantity": 1,
+          "id": "d7Lo1gS8TSA"
+        },
+        {
+          "userId": "5YUlKxjJByY",
+          "productId": "3",
+          "name": "Glow Defense SPF 50 Gel",
+          "brand": "Nevora",
+          "category": "Sunscreens",
+          "price": 499,
+          "originalPrice": 599,
+          "description": "Non-sticky sunscreen gel with a smooth finish that keeps your skin protected and fresh throughout the day",
+          "image": "/Products/Sunscreens2.png",
+          "rating": 4.8,
+          "stock": 30,
+          "quantity": 1,
+          "id": "DKP4Xs-JhAc"
+        }
+      ],
+      "totalPrice": 778,
+      "status": "pending",
+      "createdAt": "2026-10-01T08:25:16.043Z",
+      "customer": {
+        "name": "shamil",
+        "email": "shamil@gmail.com",
+        "phone": "3245646325",
+        "address": "awhghsgh",
+        "city": "ewttt",
+        "pincode": "4343340"
+      },
+      "paymentMethod": "cod",
+      "userId": "5YUlKxjJByY",
+      "id": "_MJAFCuLFyc"
+    },
+    {
+      "items": [
+        {
+          "userId": "zrd7IGtycIM",
+          "productId": "3",
+          "name": "Glow Defense SPF 50 Gel",
+          "brand": "Nevora",
+          "category": "Sunscreens",
+          "price": 499,
+          "originalPrice": 599,
+          "description": "Non-sticky sunscreen gel with a smooth finish that keeps your skin protected and fresh throughout the day",
+          "image": "/Products/Sunscreens2.png",
+          "rating": 4.8,
+          "stock": 30,
+          "quantity": 1,
+          "id": "yzlXqB62AMo"
+        },
+        {
+          "userId": "zrd7IGtycIM",
+          "productId": "2",
+          "name": "Daily Shield SPF 50 Sunscreen",
+          "brand": "Nevora",
+          "category": "Sunscreens",
+          "price": 449,
+          "originalPrice": 549,
+          "description": "Lightweight SPF 50 sunscreen that protects skin from harmful UV rays without leaving a white cast.",
+          "image": "/Products/Sunscreens1.png",
+          "rating": 4.6,
+          "stock": 28,
+          "quantity": 1,
+          "id": "WvjJ1WYMXt8"
+        }
+      ],
+      "totalPrice": 948,
+      "status": "pending",
+      "createdAt": "2026-10-01T08:27:43.078Z",
+      "customer": {
+        "name": "van",
+        "email": "van@gmail.com",
+        "phone": "23465732463",
+        "address": "van123",
+        "city": "malap[uram",
+        "pincode": "34344"
+      },
+      "paymentMethod": "cod",
+      "userId": "zrd7IGtycIM",
+      "id": "XJxKSJexCi4"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

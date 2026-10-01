@@ -1,4 +1,4 @@
-
+import toast from "react-hot-toast";
 import { useDispatch } from 'react-redux'
 import { useMutation } from '@tanstack/react-query'
 import { useNavigate, Link } from "react-router-dom"
@@ -27,6 +27,8 @@ function Login() {
         mutationFn: loginUser,
 
         onSuccess: (user) => {
+
+            toast.success("Login successful!")
            
 
             if(user.role === "admin"){
@@ -42,6 +44,7 @@ function Login() {
         },
 
         onError: (error) => {
+             toast.error(error.message);
             setError(error.message)
         },
     })
@@ -63,7 +66,7 @@ function Login() {
         const { email, password } = formData
 
         if (!email || !password) {
-            setError("Email and password are required!")
+             toast.error("Email and password are required!")
             return
         }
 

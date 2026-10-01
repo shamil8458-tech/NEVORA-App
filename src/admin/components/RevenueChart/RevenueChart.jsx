@@ -1,47 +1,130 @@
 
-import WeeklyRevenue from "./WeeklyRevenue"
-import MonthlyRevenue from "./MonthlyRevenue"
-import { useState } from "react"
+// import WeeklyRevenue from "./WeeklyRevenue"
+// import MonthlyRevenue from "./MonthlyRevenue"
+// import { useState } from "react"
 
-function RevenueChart({orders}) {
+// function RevenueChart({orders}) {
 
 
-    const [view , setView] = useState("weekly");
+//     const [view , setView] = useState("weekly");
+//   return (
+//     <div>
+
+//       <h2>Revenue</h2>
+
+
+//       <div>
+
+
+//          <button 
+//          onClick={() => setView("weekly")}
+//          disabled={view === "weekly"}>
+//                Weekly
+//          </button>
+
+
+//               <button
+//           onClick={() => setView("monthly")}
+//           disabled={view === "monthly"}
+//         >
+//           Monthly
+//         </button>
+
+
+//       </div>
+
+
+//       {view === "weekly" ? (
+//         <WeeklyRevenue orders={orders}/>
+//       ) : (
+//         <MonthlyRevenue orders={orders}/>
+//       )}
+      
+//     </div>
+//   )
+// }
+
+// export default RevenueChart
+
+
+
+
+
+
+
+
+
+import WeeklyRevenue from "./WeeklyRevenue";
+import MonthlyRevenue from "./MonthlyRevenue";
+import { useState } from "react";
+
+function RevenueChart({ orders }) {
+  const [view, setView] = useState("weekly");
+
   return (
-    <div>
+    <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
 
-      <h2>Revenue</h2>
+      {/* Header */}
+
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+
+        <div>
+          <h2 className="text-lg font-semibold text-stone-900">
+            Revenue
+          </h2>
+
+          <p className="mt-1 text-sm text-stone-500">
+            Track your store revenue performance
+          </p>
+        </div>
 
 
-      <div>
+        {/* Toggle */}
+
+        <div className="flex w-fit rounded-xl bg-stone-100 p-1">
+
+          <button
+            onClick={() => setView("weekly")}
+            className={`rounded-lg px-4 py-2 text-sm font-medium transition ${
+              view === "weekly"
+                ? "bg-white text-stone-900 shadow-sm"
+                : "text-stone-500 hover:text-stone-800"
+            }`}
+          >
+            Weekly
+          </button>
 
 
-         <button 
-         onClick={() => setView("weekly")}
-         disabled={view === "weekly"}>
-               Weekly
-         </button>
+          <button
+            onClick={() => setView("monthly")}
+            className={`rounded-lg px-4 py-2 text-sm font-medium transition ${
+              view === "monthly"
+                ? "bg-white text-stone-900 shadow-sm"
+                : "text-stone-500 hover:text-stone-800"
+            }`}
+          >
+            Monthly
+          </button>
 
-
-              <button
-          onClick={() => setView("monthly")}
-          disabled={view === "monthly"}
-        >
-          Monthly
-        </button>
-
+        </div>
 
       </div>
 
 
-      {view === "weekly" ? (
-        <WeeklyRevenue orders={orders}/>
-      ) : (
-        <MonthlyRevenue orders={orders}/>
-      )}
-      
+      {/* Chart */}
+
+      <div className="mt-6">
+
+        {view === "weekly" ? (
+          <WeeklyRevenue orders={orders} />
+        ) : (
+          <MonthlyRevenue orders={orders} />
+        )}
+
+      </div>
+
     </div>
-  )
+  );
 }
 
-export default RevenueChart
+export default RevenueChart;
