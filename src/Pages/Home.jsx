@@ -63,6 +63,13 @@ function Home() {
         alt="NEVORA skincare products"
         className="absolute inset-0 h-full w-full object-cover"
       />
+{/* 
+      <img
+        key={currentImage}
+       src={heroImage[currentImage]}
+       alt="NEVORA skincare products"
+        className="absolute inset-0 h-full w-full object-cover animate-[fadeIn_1.2s_ease-in-out]"
+      /> */}
 
       {/* Hero Content */}
 

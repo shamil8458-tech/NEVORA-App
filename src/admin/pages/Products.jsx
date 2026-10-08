@@ -135,25 +135,18 @@
 
 
 import toast from "react-hot-toast";
-import {
-  useQuery,
-  useMutation,
-  useQueryClient,
-} from "@tanstack/react-query";
+import {  useQuery,  useMutation,  useQueryClient } from "@tanstack/react-query";
 
-import {
-  useDispatch,
-  useSelector,
-} from "react-redux";
+import {  useDispatch,  useSelector } from "react-redux";
 
-import {
-  getAdminProducts,
-  deleteProduct,
-} from "../services/adminProductService";
+// import {
+//   getAdminProducts,
+//   deleteProduct,
+// } from "../services/adminProductService";
 
-import {
-  setProducts,
-} from "../redux/slices/adminProductSlice";
+
+import { getAdminProducts , moveToTrash } from "../services/adminProductService";
+import { setProducts } from "../redux/slices/adminProductSlice";
 
 import ProductForm from "../components/ProductForm";
 import ProductTable from "../components/ProductTable";
@@ -171,11 +164,19 @@ function Products() {
   const queryClient = useQueryClient();
 
 
+
+
   // Selected product for editing
   const [selectProducts, setSelectProduct] = useState(null);
 
   // Controls ProductForm visibility
   const [showForm, setShowForm] = useState(false);
+
+  
+
+  // serch///
+  const [search , setSearch] = useState("")
+
 
 
   // Products from Redux
@@ -184,13 +185,24 @@ function Products() {
   );
 
 
+  
+
+  // search///
+  
+  const FilteredProducts = products.filter((product) => 
+     product.name.toLowerCase().includes(search.toLowerCase())
+)
+
+
+
+
   // Pagination
   const {
     currentPage,
     totalPages,
     currentItems: currentProducts,
     changePage,
-  } = usePagination(products, 10);
+  } = usePagination(FilteredProducts, 10);
 
 
   // Get products
@@ -214,30 +226,55 @@ function Products() {
 
 
   // Delete product
-  const {
-    mutate: deleteMutate,
-  } = useMutation({
+  // const {
+  //   mutate: deleteMutate,
+  // } = useMutation({
 
-    mutationFn: deleteProduct,
+  //   mutationFn: deleteProduct,
 
-    onSuccess: () => {
+  //   onSuccess: () => {
 
+  //     queryClient.invalidateQueries({
+  //       queryKey: ["adminProducts"],
+  //     });
+
+  //     toast.success("Product deleted successfully");
+
+  //   },
+  //    onError: () => {
+  //   toast.error("Failed to delete product");
+  // },
+
+  // });
+
+
+  // Move to Trash///
+
+  const {mutate: moveToTrashMutate } = useMutation({
+    mutationFn : moveToTrash,
+
+
+    onSuccess : () => {
       queryClient.invalidateQueries({
-        queryKey: ["adminProducts"],
-      });
+        queryKey : ["adminProducts"]
+      })
 
-      toast.success("Product deleted successfully");
-
+       toast.success("Product moved to trash");
     },
-     onError: () => {
-    toast.error("Failed to delete product");
-  },
 
-  });
+    onError : () => {
+      toast.error("Failed to move product to trash");
+    }
+  })
+
+
+  // const handleDelete = (id) => {
+  //   deleteMutate(id);
+  // };
 
 
   const handleDelete = (id) => {
-    deleteMutate(id);
+    moveToTrashMutate(id)
   };
 
 
@@ -391,12 +428,28 @@ function Products() {
           </div>
 
 
+          {/* serach/// */}
+
+         <input type="text"
+          placeholder="Search products..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          className="w-full rounded-xl border border-stone-200 px-4 py-2.5 text-sm outline-none focus:border-emerald-500 sm:w-64" />
+
+
+
+
+
+
+
+
+
           {/* Product Count */}
 
           <div className="w-fit rounded-full bg-emerald-50 px-4 py-2">
 
             <span className="text-sm font-medium text-emerald-700">
-              {products.length} Products
+              {FilteredProducts.length} Products
             </span>
 
           </div>

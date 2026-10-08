@@ -117,30 +117,19 @@
 
 
 import toast from "react-hot-toast";
-import {
-  useQuery,
-  useMutation,
-  useQueryClient
-} from "@tanstack/react-query";
+import { useQuery,useMutation,useQueryClient} from "@tanstack/react-query";
 
-import {
-  useDispatch,
-  useSelector
-} from "react-redux";
+import {  useDispatch,  useSelector } from "react-redux";
 
 import UserTable from "../components/UserTable";
 
-import {
-  getAdminUsers,
-  updateUser
-} from "../services/adminUserService";
+import {  getAdminUsers,  updateUser } from "../services/adminUserService";
 
-import {
-  setUsers
-} from "../redux/slices/adminUserSlice";
+import {  setUsers } from "../redux/slices/adminUserSlice";
 
 import usePagination from "../../Hooks/usePagination";
 import Pagination from "../components/Pagination";
+import { useState } from "react";
 
 
 function Users() {
@@ -149,23 +138,21 @@ function Users() {
 
   const queryClient = useQueryClient();
 
+ 
+
+
   const users = useSelector(
     (state) => state.adminUsers.users
   );
 
 
-  const {
-    currentPage,
-    totalPages,
-    currentItems: currentUsers,
-    changePage,
-  } = usePagination(users, 10);
 
 
-  const {
-    isLoading,
-    isError
-  } = useQuery({
+
+  const { currentPage,  totalPages, currentItems: currentUsers,  changePage } = usePagination(users, 10);
+
+
+  const {  isLoading,  isError} = useQuery({
 
     queryKey: ["adminUsers"],
 
@@ -183,9 +170,7 @@ function Users() {
 
   // Toggle block / unblock
 
-  const {
-    mutate: toggleBlock
-  } = useMutation({
+  const {  mutate: toggleBlock } = useMutation({
 
     mutationFn: updateUser,
 
@@ -297,6 +282,7 @@ function Users() {
             </p>
 
           </div>
+
 
 
           {/* User Count */}

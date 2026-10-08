@@ -76,6 +76,12 @@ function AdminSidebar() {
   const location = useLocation();
 
   const handleLogout = () => {
+
+    const confirmLogout = window.confirm("Are you sure you want to logout?")
+
+    if(!confirmLogout){
+      return
+    }
     dispatch(adminLogout());
     toast.success("Logged out successfully"); 
     navigate("/login");
@@ -178,6 +184,64 @@ function AdminSidebar() {
           <span>Products</span>
 
         </Link>
+
+
+
+   {/* Trash */}
+<Link
+  to="/admin/trash"
+  className={`mb-2 flex items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium transition-all duration-200 ${
+    isActive("/admin/trash")
+      ? "bg-[#e8f4ef] text-[#17634f]"
+      : "text-[#665f58] hover:bg-[#f7f4f0] hover:text-[#17634f]"
+  }`}
+>
+
+  <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#f5f2ee]">
+
+    <svg
+      className="h-4 w-4"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      strokeWidth="1.8"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M3 6h18"
+      />
+
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M8 6V4h8v2"
+      />
+
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M19 6l-1 14H6L5 6"
+      />
+
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M10 11v5M14 11v5"
+      />
+    </svg>
+
+  </span>
+
+  <span>Trash</span>
+
+</Link>
+
+
+
+
+
+
 
 
         {/* Users */}

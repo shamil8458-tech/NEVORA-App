@@ -215,7 +215,7 @@ function UserTable({ users, onToggleBlock }) {
 
               {/* Action */}
 
-              <td className="px-4 py-4">
+              {/* <td className="px-4 py-4">
 
                 <button
                   type="button"
@@ -233,7 +233,32 @@ function UserTable({ users, onToggleBlock }) {
 
                 </button>
 
-              </td>
+              </td> */}
+
+
+              <td className="px-4 py-4">
+
+             {user.role !== "admin" && (
+               <button
+                 type="button"
+                 onClick={() => onToggleBlock(user)}
+                 className={
+                   user.isBlocked
+                     ? "rounded-lg border border-emerald-100 px-3 py-2 text-xs font-medium text-emerald-700 transition hover:bg-emerald-50"
+                     : "rounded-lg border border-red-100 px-3 py-2 text-xs font-medium text-red-500 transition hover:bg-red-50"
+                 }
+               >
+                 {user.isBlocked ? "Unblock" : "Block"}
+               </button>
+             )}
+
+           {user.role === "admin" && (
+             <span className="text-xs font-medium text-stone-400">
+               Not available
+             </span>
+           )}
+         
+       </td>
 
             </tr>
 

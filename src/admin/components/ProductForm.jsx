@@ -208,20 +208,11 @@
 
 
 import toast from "react-hot-toast";
-import {
-  useMutation,
-  useQueryClient,
-} from "@tanstack/react-query";
+import {  useMutation,  useQueryClient} from "@tanstack/react-query";
 
-import {
-  addProduct,
-  updateProduct,
-} from "../services/adminProductService";
+import {  addProduct,  updateProduct} from "../services/adminProductService";
 
-import {
-  useState,
-  useEffect,
-} from "react";
+import {  useState,  useEffect} from "react";
 
 
 function ProductForm({ editProduct, onCancel }) {
@@ -361,6 +352,21 @@ function ProductForm({ editProduct, onCancel }) {
   const handleSubmit = (e) => {
 
     e.preventDefault();
+
+      if (
+    !product.name ||
+    !product.brand ||
+    !product.category ||
+    !product.price ||
+    !product.originalPrice ||
+    !product.description ||
+    !product.image ||
+    !product.rating ||
+    !product.stock
+  ) {
+    toast.error("Please fill all fields");
+    return;
+  }
 
 
     if (editProduct) {

@@ -239,7 +239,7 @@ function Orders() {
   const queryClient = useQueryClient();
 
   const [selectedOrder, setSelectedOrder] = useState(null);
-
+  
 
   const orders = useSelector(
     (state) => state.adminOrders.orders
@@ -256,10 +256,7 @@ function Orders() {
 
   // Get orders
 
-  const {
-    isLoading,
-    isError
-  } = useQuery({
+  const {  isLoading,  isError} = useQuery({
 
     queryKey: ["adminOrders"],
 
@@ -398,6 +395,7 @@ function Orders() {
             </p>
 
           </div>
+
 
 
           {/* Order Count */}

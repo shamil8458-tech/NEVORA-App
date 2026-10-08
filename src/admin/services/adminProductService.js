@@ -6,7 +6,8 @@ const api = axios.create({
 
 export const getAdminProducts = async () => {
     const response = await api.get("/products")
-    return response.data;
+    return response.data.filter(
+        (product) => product.isDeleted !== true)
 }
 
 export const addProduct = async (product) => {
@@ -20,7 +21,40 @@ export const updateProduct = async (product) => {
 }
 
 
-export const deleteProduct = async (id) =>  {
-   const response = await api.delete(`/products/${id}`);
-   return response.data;
+// export const deleteProduct = async (id) =>  {
+//    const response = await api.delete(`/products/${id}`);
+//    return response.data;
+// }
+
+
+export const moveToTrash = async (id) => {
+    const response = await api.patch(`/products/${id}` , {
+        isDeleted : true
+    })
+
+    return response.data
+}
+
+export const getTrashProducts = async () => {
+    const response = await api.get("/products")
+
+    return response.data.filter(
+        (product) => product.isDeleted === true
+    );
+}
+
+
+export const restoreProduct = async (id) => {
+    const response = await api.patch(`/products/${id}` , {
+        isDeleted : false
+    })
+
+    return response.data
+}
+
+
+export const permanentlyDeleteProduct = async (id) => {
+    const response = await api.delete(`/products/${id}`)
+
+    return response.data
 }
