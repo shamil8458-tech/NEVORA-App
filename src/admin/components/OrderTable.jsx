@@ -81,11 +81,7 @@
 
 
 
-function OrderTable({
-  orders,
-  onStatusChange,
-  onView
-}) {
+function OrderTable({  orders,  onStatusChange,  onView}) {
 
   return (
 

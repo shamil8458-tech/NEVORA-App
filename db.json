@@ -38,7 +38,7 @@
       "password": "muhammed123",
       "role": "user",
       "id": "H-lKcu0nvSo",
-      "isBlocked": true
+      "isBlocked": false
     },
     {
       "name": "muahmmed shamil",
@@ -91,6 +91,13 @@
       "password": "van123",
       "role": "user",
       "id": "zrd7IGtycIM"
+    },
+    {
+      "name": "Bridgeon",
+      "email": "Bridgeon@gmail.com",
+      "password": "bri123",
+      "role": "user",
+      "id": "oZUW5ormFgI"
     }
   ],
   "products": [
@@ -1841,6 +1848,138 @@
       "paymentMethod": "online",
       "userId": "zrd7IGtycIM",
       "id": "jrCpqA-4m7U"
+    },
+    {
+      "items": [
+        {
+          "userId": "zrd7IGtycIM",
+          "productId": "7",
+          "name": "Aloe Vera Daily Moisturiser",
+          "brand": "Nevora",
+          "category": "Moisturisers",
+          "price": 349,
+          "originalPrice": 429,
+          "description": "Lightweight aloe vera moisturiser that provides everyday hydration and leaves skin soft and comfortable.",
+          "image": "/Products/Moisturisers1.png",
+          "rating": 4.5,
+          "stock": 30,
+          "quantity": 1,
+          "id": "oeatfYApeI4"
+        }
+      ],
+      "totalPrice": 349,
+      "status": "cancelled",
+      "createdAt": "2026-10-08T19:58:27.089Z",
+      "customer": {
+        "name": "Muhammed shamil S",
+        "email": "ahfieeiuwyeafi7uw",
+        "phone": "2234524443",
+        "address": "ahfieeiuwyeafi7uw",
+        "city": "mallapura,m",
+        "pincode": "343345"
+      },
+      "paymentMethod": "cod",
+      "userId": "zrd7IGtycIM",
+      "id": "Zh_8xSq_moI"
+    },
+    {
+      "items": [
+        {
+          "userId": "zrd7IGtycIM",
+          "productId": "7",
+          "name": "Aloe Vera Daily Moisturiser",
+          "brand": "Nevora",
+          "category": "Moisturisers",
+          "price": 349,
+          "originalPrice": 429,
+          "description": "Lightweight aloe vera moisturiser that provides everyday hydration and leaves skin soft and comfortable.",
+          "image": "/Products/Moisturisers1.png",
+          "rating": 4.5,
+          "stock": 30,
+          "quantity": 1,
+          "id": "HVzSjMf7rqM"
+        }
+      ],
+      "totalPrice": 349,
+      "status": "cancelled",
+      "createdAt": "2026-10-09T08:00:05.588Z",
+      "customer": {
+        "name": "Muhammed shamil S",
+        "email": "ahfieeiuwyeafi7uw",
+        "phone": "2234524443",
+        "address": "ahfieeiuwyeafi7uw",
+        "city": "mallapura,m",
+        "pincode": "343345"
+      },
+      "paymentMethod": "cod",
+      "userId": "zrd7IGtycIM",
+      "id": "Vu6lJnxCXxA"
+    },
+    {
+      "items": [
+        {
+          "userId": "oZUW5ormFgI",
+          "productId": "7",
+          "name": "Aloe Vera Daily Moisturiser",
+          "brand": "Nevora",
+          "category": "Moisturisers",
+          "price": 349,
+          "originalPrice": 429,
+          "description": "Lightweight aloe vera moisturiser that provides everyday hydration and leaves skin soft and comfortable.",
+          "image": "/Products/Moisturisers1.png",
+          "rating": 4.5,
+          "stock": 30,
+          "quantity": 1,
+          "id": "0XMbfmgMbSQ"
+        }
+      ],
+      "totalPrice": 349,
+      "status": "pending",
+      "createdAt": "2026-10-09T08:01:31.788Z",
+      "customer": {
+        "name": "Muhammed shamil S",
+        "email": "ahfieeiuwyeafi7uw",
+        "phone": "2234524443",
+        "address": "ahfieeiuwyeafi7uw",
+        "city": "mallapura,m",
+        "pincode": "343345"
+      },
+      "paymentMethod": "cod",
+      "userId": "oZUW5ormFgI",
+      "id": "VB4Sevt4Vwg"
+    },
+    {
+      "items": [
+        {
+          "userId": "oZUW5ormFgI",
+          "productId": "3",
+          "name": "Glow Defense SPF 50 Gel",
+          "brand": "Nevora",
+          "category": "Sunscreens",
+          "price": 499,
+          "originalPrice": 599,
+          "description": "Non-sticky sunscreen gel with a smooth finish that keeps your skin protected and fresh throughout the day",
+          "image": "/Products/Sunscreens2.png",
+          "rating": 4.8,
+          "stock": 30,
+          "quantity": 1,
+          "id": "7yV4Ua-VRJ4"
+        }
+      ],
+      "totalPrice": 499,
+      "status": "pending",
+      "createdAt": "2026-10-09T08:13:16.469Z",
+      "customer": {
+        "name": "Muhammed shamil S",
+        "email": "ahfieeiuwyeafi7uw",
+        "phone": "2234524443",
+        "address": "ahfieeiuwyeafi7uw",
+        "city": "mallapura,m",
+        "pincode": "343345"
+      },
+      "paymentMethod": "cod",
+      "userId": "oZUW5ormFgI",
+      "id": "wje-139JnYA"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

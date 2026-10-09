@@ -35,19 +35,7 @@ function ProductCard({product}) {
     }
   })
 
-  // const {mutate: addWishlist} = useMutation({
-  //   mutationFn : addWidhListItem,
-
-  //   onSuccess: (data) => {
-  //     dispatch(addToWishlist(data));
-
-  //     queryClient.invalidateQueries({
-  //       queryKey : ["wishlist"]
-  //     })
-  //   }
-  // })
-
-
+ 
 
   //  whishList icons Toggle///
 

@@ -1,69 +1,5 @@
 
 
-// import { Link , useNavigate } from "react-router-dom";
-// import {  useDispatch } from "react-redux";
-// import { adminLogout } from "../redux/slices/adminAuthSlice";
-
-
-// function AdminSidebar() {
-
-//     const dispatch = useDispatch();
-//     const navigate = useNavigate();
-
-
-//     const handleLogout = () => {
-//         dispatch(adminLogout())
-
-//         navigate("/login");
-//     };
-//   return (
-//     <div>
-
-//          <h2>Admin Panel</h2>
-
-
-//          <nav>
-
-//             <Link to="/admin">
-//                 Dashboard
-//             </Link>
-
-//             <Link to="/admin/products">
-//             Products
-//             </Link>
-
-//              <Link to="/admin/users">
-//              Users
-//              </Link>
-
-
-//              <Link to="/admin/orders">
-//              Orders
-//              </Link>
-            
-//          </nav>
-
-
-//          <div>
-
-//             <button onClick={handleLogout}>
-//                   Logout
-//             </button>
-//          </div>
-      
-//     </div>
-//   )
-// }
-
-// export default AdminSidebar
-
-
-
-
-
-
-
-
 import toast from "react-hot-toast";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
@@ -77,11 +13,7 @@ function AdminSidebar() {
 
   const handleLogout = () => {
 
-    const confirmLogout = window.confirm("Are you sure you want to logout?")
 
-    if(!confirmLogout){
-      return
-    }
     dispatch(adminLogout());
     toast.success("Logged out successfully"); 
     navigate("/login");
